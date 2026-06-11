@@ -187,6 +187,322 @@ export const services: Service[] = [
         'STK Push, C2B, B2C, and reconciliation integrations using Safaricom\'s Daraja API. Reliable M-Pesa payments for Kenyan websites and platforms, built and supported by Silvacal Technologies.',
     },
   },
+  {
+    slug: 'web-development',
+    name: 'Web Development',
+    tagline: 'Websites that load fast, rank well, and turn visitors into customers',
+    intro:
+      'Whether you need a marketing site that establishes credibility, an online store that takes payments, or a portal your customers log into, we build on modern frameworks that are fast by default and easy to extend. Every site we deliver is responsive, optimised for Kenyan mobile networks, and handed over with documentation your team can actually use.',
+    offerings: [
+      {
+        title: 'Business Websites',
+        description:
+          'A professional website that explains what you do, builds trust with new customers, and gives you a place to send people instead of a Facebook page. We handle the design, copywriting structure, and a content management setup so you can update text and images yourself.',
+      },
+      {
+        title: 'E-Commerce Websites',
+        description:
+          'Online stores with product catalogues, cart and checkout flows, and M-Pesa or card payment options built in from the start. We set up order management so you can track sales and stock without juggling spreadsheets.',
+      },
+      {
+        title: 'Custom Web Portals',
+        description:
+          "Login-protected portals for clients, students, or members — think parent portals, client dashboards, or member-only resource libraries. We build role-based access so different users see only what's relevant to them.",
+      },
+      {
+        title: 'Website Redesign & Rescue',
+        description:
+          "If your current site is slow, outdated, or was never finished by a previous developer, we audit what exists, salvage what's worth keeping, and rebuild the rest on a stack that's actually maintainable. You keep your domain and content history.",
+      },
+      {
+        title: 'Performance & SEO Optimisation',
+        description:
+          "We tune page load speed, image sizes, and code structure so your site scores well on Google's Core Web Vitals, and set up on-page SEO basics — meta tags, sitemaps, and structured data — so search engines can find and rank you.",
+      },
+    ],
+    process: [
+      {
+        title: 'Discovery & Sitemap',
+        description:
+          'We map out the pages, content, and user journeys your site needs based on your goals and audience.',
+      },
+      {
+        title: 'Design & Content',
+        description:
+          'We design page layouts in your brand colours and work with you to finalise copy and imagery before development begins.',
+      },
+      {
+        title: 'Build & Launch',
+        description:
+          'We build the site using Next.js for fast page loads, test across devices, and launch on your domain with SSL configured.',
+      },
+      {
+        title: 'Post-Launch Support',
+        description:
+          'We monitor performance after launch and remain available for content updates, new pages, or feature additions.',
+      },
+    ],
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Vercel'],
+    faqs: [
+      {
+        question: 'What determines the cost of a website?',
+        answer:
+          'Cost depends mainly on the number of unique page designs, whether you need e-commerce or portal functionality, and how much content needs to be written or migrated. A simple business website costs significantly less than a store with dozens of products or a portal with user accounts — we give you a fixed quote after a short scoping call.',
+      },
+      {
+        question: 'How long does a website project take?',
+        answer:
+          'A standard business website typically takes 2 to 4 weeks from content sign-off to launch. E-commerce sites and custom portals usually take 4 to 8 weeks depending on the number of features and integrations involved.',
+      },
+      {
+        question: 'Will we be able to update the content ourselves?',
+        answer:
+          'Yes. We set up a content management system appropriate to your site so you can edit text, swap images, and add blog posts or products without needing a developer. We also provide a short walkthrough so your team is comfortable using it from day one.',
+      },
+    ],
+    seo: {
+      title: 'Web Development Services in Kenya | Silvacal Technologies',
+      description:
+        'Business websites, e-commerce stores, and custom web portals built with Next.js and React. Fast, SEO-ready websites for Kenyan businesses, with ongoing support.',
+    },
+  },
+  {
+    slug: 'mobile-app-development',
+    name: 'Mobile App Development',
+    tagline: 'One codebase, native apps for Android and iOS',
+    intro:
+      'We build cross-platform mobile apps with React Native and Expo, so your product runs natively on both Android and iOS from a single codebase. For the Kenyan market, where most users are on Android, this means you reach the widest audience possible without doubling your development cost or maintaining two separate teams.',
+    offerings: [
+      {
+        title: 'Consumer Apps',
+        description:
+          'Apps your customers download to browse, book, or buy — built with the smooth animations and offline-friendly behaviour users expect from apps on the Play Store and App Store. We design for low-end Android devices as well as newer phones.',
+      },
+      {
+        title: 'Business & Operations Apps',
+        description:
+          'Internal apps for field teams, drivers, or sales agents to log activity, capture data, and sync with your main system. These apps replace paper forms and WhatsApp groups with structured data your office can actually use.',
+      },
+      {
+        title: 'App Store Deployment (Play Store & App Store)',
+        description:
+          "We handle developer account setup, app store listings, screenshots, and the submission and review process for both Google Play and Apple's App Store. We also manage updates and version releases after launch.",
+      },
+      {
+        title: 'Offline-Capable Apps',
+        description:
+          "For users with unreliable connectivity, we build apps that store data locally and sync automatically once a connection is available. This is essential for field agents, rural users, and anyone who can't depend on constant data.",
+      },
+      {
+        title: 'Push Notifications & SMS Integration',
+        description:
+          "We set up push notifications for order updates, reminders, and announcements, and integrate SMS gateways for users who don't have data or haven't installed the app yet. Both channels can be triggered from the same backend events.",
+      },
+    ],
+    process: [
+      {
+        title: 'Discovery & Platform Strategy',
+        description:
+          'We confirm whether you need Android only, iOS only, or both, and define the core screens and features for your first release.',
+      },
+      {
+        title: 'UI Design & Prototyping',
+        description:
+          "We design the app's screens and navigation flow and walk you through a clickable prototype before development starts.",
+      },
+      {
+        title: 'Development & Device Testing',
+        description:
+          'We build with React Native and Expo and test on a range of physical Android and iOS devices to catch issues before release.',
+      },
+      {
+        title: 'Store Submission & Support',
+        description:
+          'We submit the app to the relevant app stores, handle review feedback, and remain available for updates and bug fixes after launch.',
+      },
+    ],
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'PostgreSQL', 'Supabase'],
+    faqs: [
+      {
+        question: 'Should we build for Android first, or both platforms at once?',
+        answer:
+          'For most Kenyan businesses, we recommend launching on Android first since it represents the large majority of smartphones in the local market, then adding iOS once the app is validated. Because we build with React Native, adding iOS later reuses almost all of the existing code rather than starting over.',
+      },
+      {
+        question: 'Is cross-platform development cheaper than building separate native apps?',
+        answer:
+          "Yes, significantly. Building separate native apps for Android and iOS roughly doubles development and maintenance cost since you're maintaining two codebases. React Native lets us share around 90% of the code between platforms, which keeps both initial cost and future updates lower.",
+      },
+      {
+        question: 'What happens after the app is published?',
+        answer:
+          'We offer maintenance plans that cover bug fixes, OS compatibility updates, and minor feature additions, since both Android and iOS regularly require updates to stay compatible. We also handle app store account management so your listing stays active and up to date.',
+      },
+    ],
+    seo: {
+      title: 'Mobile App Development Kenya | React Native & Expo | Silvacal Technologies',
+      description:
+        'Cross-platform Android and iOS apps built with React Native and Expo. Consumer apps, business operations apps, and offline-capable apps for Kenyan businesses.',
+    },
+  },
+  {
+    slug: 'digital-marketing',
+    name: 'Digital Marketing',
+    tagline: 'Get found on Google, get noticed on social, get replies on WhatsApp',
+    intro:
+      "Having a great website or app means little if customers can't find it. We run digital marketing built around how Kenyans actually search, scroll, and shop — local SEO, social media management, paid ads, and WhatsApp Business setup that turns chats into sales.",
+    offerings: [
+      {
+        title: 'Search Engine Optimisation (SEO)',
+        description:
+          "We optimise your website's content, structure, and technical setup so it ranks for the searches your customers are actually making, including local searches like 'near me'. This includes keyword research, on-page fixes, and ongoing content recommendations.",
+      },
+      {
+        title: 'Social Media Marketing',
+        description:
+          'We plan and post content for Facebook, Instagram, and TikTok that fits your brand and speaks to your audience, and manage comments and messages so customer questions get answered. Content is scheduled around what performs best for your industry.',
+      },
+      {
+        title: 'Google Ads Campaigns',
+        description:
+          'We set up and manage Google Search and Display ad campaigns targeted at the locations and search terms most relevant to your business, with budgets you control. We monitor performance weekly and adjust targeting to reduce wasted spend.',
+      },
+      {
+        title: 'WhatsApp Business API Setup',
+        description:
+          'We set up WhatsApp Business with catalogues, automated greetings, and quick-reply templates so customers can browse and order directly in chat. For higher-volume businesses, we integrate the WhatsApp Business API with your existing systems.',
+      },
+      {
+        title: 'Content & Analytics Reporting',
+        description:
+          "We track website traffic, ad performance, and social engagement in a single monthly report written in plain language, not just numbers. Each report includes what worked, what didn't, and what we're adjusting next.",
+      },
+    ],
+    process: [
+      {
+        title: 'Audit & Strategy',
+        description:
+          'We review your current website, social presence, and competitors to identify the highest-impact opportunities for your budget.',
+      },
+      {
+        title: 'Setup & Foundations',
+        description:
+          'We set up tracking, ad accounts, and social profiles correctly so every campaign from day one is measurable.',
+      },
+      {
+        title: 'Campaign Execution',
+        description:
+          'We run the agreed mix of SEO, social, ads, and WhatsApp activity on a weekly content and posting schedule.',
+      },
+      {
+        title: 'Reporting & Optimisation',
+        description:
+          "We review results monthly, report back in plain language, and reallocate budget toward what's driving results.",
+      },
+    ],
+    technologies: ['Google Analytics', 'Google Search Console', 'Google Ads', 'Meta Business Suite', 'WhatsApp Business API', 'Canva'],
+    faqs: [
+      {
+        question: 'How long does SEO take to show results?',
+        answer:
+          'SEO is a gradual process — most businesses start seeing measurable improvements in search rankings and traffic within 3 to 6 months, with continued growth after that. Paid ads and social media can drive traffic immediately while SEO builds in the background.',
+      },
+      {
+        question: 'How much should we budget for digital marketing?',
+        answer:
+          'This depends on your goals and how competitive your industry is, but most small to medium Kenyan businesses start with a combined budget of KES 30,000 to 80,000 per month covering our management fee and ad spend. We recommend starting with one or two channels and expanding once you see what is working.',
+      },
+      {
+        question: 'What kind of reporting do we get?',
+        answer:
+          "You receive a monthly report covering website traffic, ad performance, and social media growth, written in plain language with clear takeaways rather than raw data dumps. We're also available for a monthly call to walk through results if you'd like.",
+      },
+    ],
+    seo: {
+      title: 'Digital Marketing Services Kenya | SEO, Ads & WhatsApp | Silvacal Technologies',
+      description:
+        'SEO, social media management, Google Ads, and WhatsApp Business setup for Kenyan businesses. Local search marketing with monthly reporting.',
+    },
+  },
+  {
+    slug: 'branding-identity',
+    name: 'Branding & Identity',
+    tagline: 'Visual identity that makes a new business look established from day one',
+    intro:
+      "First impressions happen before a customer ever speaks to you — on your logo, your business card, your social media page. We design visual identities that look professional and consistent everywhere your brand shows up, whether you're launching a new business or refreshing one that's outgrown its current look.",
+    offerings: [
+      {
+        title: 'Logo & Visual Identity',
+        description:
+          'We design a logo along with a core colour palette and typography that reflects your business and works across digital and print. You receive multiple concepts before we refine the chosen direction into final files.',
+      },
+      {
+        title: 'Brand Guidelines Documents',
+        description:
+          "A reference document showing how your logo, colours, and fonts should be used — including spacing rules, do's and don'ts, and examples — so anyone designing for your business stays consistent. This is especially useful once you start working with multiple designers or agencies.",
+      },
+      {
+        title: 'Company Profile Design',
+        description:
+          'A professionally designed company profile covering your services, team, and track record, formatted for sharing with clients, investors, or partners. We write the structure with you and design it to match your brand identity.',
+      },
+      {
+        title: 'Business Cards & Letterheads',
+        description:
+          "Print-ready designs for business cards, letterheads, and invoice templates that match your brand guidelines, delivered in formats ready to send to any printer in Kenya. We can also recommend local printers we've worked with.",
+      },
+      {
+        title: 'Social Media Kits',
+        description:
+          'A set of templates for profile images, cover photos, and post layouts for Facebook, Instagram, and WhatsApp, so your social presence looks consistent without designing each post from scratch. Templates are delivered editable so your team can update them.',
+      },
+    ],
+    process: [
+      {
+        title: 'Discovery & Direction',
+        description:
+          'We discuss your business, audience, and any existing branding to agree on a creative direction before design begins.',
+      },
+      {
+        title: 'Concept Design',
+        description:
+          'We present two to three logo and identity concepts based on the agreed direction for you to react to.',
+      },
+      {
+        title: 'Refinement',
+        description:
+          'We refine the chosen concept based on your feedback until the identity is ready for final delivery.',
+      },
+      {
+        title: 'Final Delivery & Files',
+        description:
+          'We deliver final files in all formats you need, along with guidelines for using them consistently.',
+      },
+    ],
+    technologies: ['Adobe Illustrator', 'Adobe Photoshop', 'Figma', 'Canva'],
+    faqs: [
+      {
+        question: 'What file formats do we receive?',
+        answer:
+          'You receive your logo in vector formats (AI, EPS, SVG) for scaling to any size, plus PNG and JPG versions for everyday digital use. Brand guideline documents and collateral are delivered as print-ready PDFs alongside editable source files.',
+      },
+      {
+        question: 'How many revision rounds are included?',
+        answer:
+          "Our standard logo and identity packages include up to two rounds of revisions on the chosen concept, which is enough for most projects to reach a result you're happy with. Additional rounds or entirely new concepts beyond the initial set can be added if needed.",
+      },
+      {
+        question: 'How long does a branding project take?',
+        answer:
+          'A logo and core identity typically takes 1 to 2 weeks from discovery to final files. Adding a full brand guidelines document, company profile, and collateral set usually extends this to 3 to 4 weeks.',
+      },
+    ],
+    seo: {
+      title: 'Branding & Identity Design Kenya | Logo, Guidelines & Collateral | Silvacal Technologies',
+      description:
+        'Logo design, brand guidelines, company profiles, and marketing collateral for Kenyan businesses. Professional visual identity from Silvacal Technologies.',
+    },
+  },
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

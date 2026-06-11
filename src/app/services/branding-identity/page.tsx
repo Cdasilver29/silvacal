@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
+import ServicePage from '@/components/ServicePage';
+import { getServiceBySlug } from '@/data/services';
+
+const service = getServiceBySlug('branding-identity')!;
+
+export const metadata: Metadata = {
+  title: service.seo.title,
+  description: service.seo.description,
+};
+
 export default function BrandingIdentityPage() {
-  return (
-    <h1 className="px-4 py-24 text-center font-heading text-4xl text-navy">
-      Branding &amp; Identity
-    </h1>
-  );
+  return <ServicePage service={service} />;
 }
