@@ -86,8 +86,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-silver/20 py-6 text-center text-sm text-silver/70">
-        © 2026 Silvacal Technologies. All rights reserved
+      <div className="border-t border-silver/20 px-4 py-6 text-center text-sm text-silver/70">
+        <p>© 2026 Silvacal Technologies. All rights reserved</p>
+        <div className="mt-2 flex justify-center gap-4">
+          <Link href="/privacy" className="transition hover:text-electric">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="transition hover:text-electric">
+            Terms of Service
+          </Link>
+        </div>
       </div>
     </footer>
   );

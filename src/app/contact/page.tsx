@@ -3,11 +3,13 @@ import ContactForm from '@/components/ContactForm';
 import { WhatsAppIcon } from '@/components/icons';
 import { contactInfo, whatsappLink } from '@/data/site';
 import { contactHero, businessHours, contactSeo } from '@/data/contact';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: contactSeo.title,
   description: contactSeo.description,
-};
+  path: '/contact',
+});
 
 export default function ContactPage() {
   return (

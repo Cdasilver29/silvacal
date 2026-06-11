@@ -4,11 +4,13 @@ import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
 import { CheckIcon } from '@/components/icons';
 import { packagesHero, packageGroups, packagesFaqs, packagesSeo } from '@/data/packages';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: packagesSeo.title,
   description: packagesSeo.description,
-};
+  path: '/packages',
+});
 
 export default function PackagesPage() {
   return (

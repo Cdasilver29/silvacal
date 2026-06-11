@@ -11,6 +11,7 @@ import {
   ShieldIcon,
   LayersIcon,
 } from '@/components/icons';
+import { buildMetadata } from '@/lib/seo';
 
 const iconMap = {
   award: AwardIcon,
@@ -21,10 +22,11 @@ const iconMap = {
   layers: LayersIcon,
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: aboutSeo.title,
   description: aboutSeo.description,
-};
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (

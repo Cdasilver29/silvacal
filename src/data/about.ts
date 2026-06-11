@@ -93,5 +93,5 @@ export const values: ValueItem[] = [
 export const aboutSeo = {
   title: 'About Us',
   description:
-    'Silvacal Technologies is a Nairobi-based software engineering company building web, mobile, and M-Pesa-integrated platforms for businesses across Kenya and East Africa.',
+    'Silvacal Technologies is a Nairobi-based software engineering company building web, mobile, and M-Pesa-integrated platforms for Kenyan businesses.',
 };

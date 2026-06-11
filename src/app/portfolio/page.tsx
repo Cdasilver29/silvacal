@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
 import { portfolioHero, portfolioProjects, portfolioClosing, portfolioSeo } from '@/data/portfolio';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: portfolioSeo.title,
   description: portfolioSeo.description,
-};
+  path: '/portfolio',
+});
 
 export default function PortfolioPage() {
   return (

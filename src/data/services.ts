@@ -103,9 +103,9 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'Software Development Services in Kenya | Silvacal Technologies',
+      title: 'Software Development Services in Kenya',
       description:
-        'Custom business platforms, SaaS products, and systems integration built for Kenyan businesses. PostgreSQL, TypeScript, and Next.js development with long-term support.',
+        'Custom business platforms, SaaS products, and systems integration for Kenyan businesses, built with PostgreSQL, TypeScript, and Next.js, with long-term support.',
     },
   },
   {
@@ -182,9 +182,9 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'M-Pesa Daraja API Integration Kenya | Silvacal Technologies',
+      title: 'M-Pesa Integration Developer in Kenya | Daraja API',
       description:
-        'STK Push, C2B, B2C, and reconciliation integrations using Safaricom\'s Daraja API. Reliable M-Pesa payments for Kenyan websites and platforms, built and supported by Silvacal Technologies.',
+        "M-Pesa integration developer in Kenya. We build STK Push, C2B, B2C, and reconciliation solutions on Safaricom's Daraja API for websites and platforms.",
     },
   },
   {
@@ -261,9 +261,9 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'Web Development Services in Kenya | Silvacal Technologies',
+      title: 'Web Design Company in Nairobi, Kenya',
       description:
-        'Business websites, e-commerce stores, and custom web portals built with Next.js and React. Fast, SEO-ready websites for Kenyan businesses, with ongoing support.',
+        'Silvacal Technologies is a web design company in Nairobi building business websites, e-commerce stores, and web portals with Next.js. Fast and SEO-ready.',
     },
   },
   {
@@ -340,7 +340,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'Mobile App Development Kenya | React Native & Expo | Silvacal Technologies',
+      title: 'Mobile App Development Kenya | React Native & Expo',
       description:
         'Cross-platform Android and iOS apps built with React Native and Expo. Consumer apps, business operations apps, and offline-capable apps for Kenyan businesses.',
     },
@@ -419,9 +419,9 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'Digital Marketing Services Kenya | SEO, Ads & WhatsApp | Silvacal Technologies',
+      title: 'Digital Marketing Services Kenya | SEO, Ads & WhatsApp',
       description:
-        'SEO, social media management, Google Ads, and WhatsApp Business setup for Kenyan businesses. Local search marketing with monthly reporting.',
+        'SEO, social media management, Google Ads, and WhatsApp Business setup for Kenyan businesses in Nairobi. Local search marketing with monthly reporting.',
     },
   },
   {
@@ -498,7 +498,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: 'Branding & Identity Design Kenya | Logo, Guidelines & Collateral | Silvacal Technologies',
+      title: 'Branding & Identity Design Kenya | Logo, Guidelines & Collateral',
       description:
         'Logo design, brand guidelines, company profiles, and marketing collateral for Kenyan businesses. Professional visual identity from Silvacal Technologies.',
     },

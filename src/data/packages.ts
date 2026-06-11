@@ -142,7 +142,7 @@ export const packageGroups: PackageGroup[] = [
 export const packagesSeo = {
   title: 'Packages & Pricing',
   description:
-    'Transparent starting prices for website design, mobile apps, M-Pesa integration, and digital marketing from Silvacal Technologies. Free custom quotes for every project.',
+    'Transparent starting prices for website design, mobile apps, M-Pesa integration, and digital marketing in Kenya. Free custom quotes for every project.',
 };
 
 export type PackageFaq = {

@@ -2,10 +2,28 @@ import Link from 'next/link';
 import type { Service } from '@/data/services';
 import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
+import { siteConfig } from '@/data/site';
 
 export default function ServicePage({ service }: { service: Service }) {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.name,
+    description: service.seo.description,
+    provider: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    areaServed: 'KE',
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="relative overflow-hidden bg-navy">
         <div
           className="pointer-events-none absolute inset-0"

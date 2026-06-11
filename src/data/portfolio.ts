@@ -79,5 +79,5 @@ export const portfolioClosing =
 export const portfolioSeo = {
   title: 'Our Work',
   description:
-    'See the type of custom software, e-commerce stores, and websites Silvacal Technologies builds for businesses in Kenya, from driving school management platforms to M-Pesa-enabled online stores.',
+    'See examples of custom software, e-commerce stores, and websites built by Silvacal Technologies for Kenyan businesses, from driving schools to online stores.',
 };

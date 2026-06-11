@@ -201,3 +201,9 @@ export const ctaBand = {
   primaryCta: { label: 'Get a Free Quote', href: '/contact' } satisfies CtaLink,
   secondaryCtaLabel: 'Chat on WhatsApp',
 };
+
+export const homeSeo = {
+  title: 'Software Development Company in Nairobi, Kenya',
+  description:
+    'Silvacal Technologies is a Nairobi-based software development company building web platforms, mobile apps, and M-Pesa-integrated systems for Kenyan businesses.',
+};
