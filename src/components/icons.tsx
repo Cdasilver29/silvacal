@@ -264,3 +264,58 @@ export function WhatsAppIcon() {
     </svg>
   );
 }
+
+export function AwardIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <circle cx="12" cy="8" r="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5" />
+    </svg>
+  );
+}
+
+export function PaymentIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <rect x="3" y="6" width="14" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="18" cy="9" r="3" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3M16.5 9h3" />
+    </svg>
+  );
+}
+
+export function TagIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M11 3h7a1 1 0 011 1v7a1 1 0 01-.3.7l-9 9a1 1 0 01-1.4 0l-6.7-6.7a1 1 0 010-1.4l9-9A1 1 0 0111 3z" />
+      <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function ClockIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+export function ShieldIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+    </svg>
+  );
+}
+
+export function LayersIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9 4.5 9-4.5M3 16.5L12 21l9-4.5" />
+    </svg>
+  );
+}
