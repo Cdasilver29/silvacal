@@ -92,6 +92,171 @@ export function PaletteIcon() {
   );
 }
 
+export function TypeScriptIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.5 8h4M8.5 8v8M13.5 16c.5.5 1.2.8 2 .8 1.2 0 2-.6 2-1.6 0-2-4-1.2-4-3.4 0-1 .8-1.6 2-1.6.8 0 1.5.3 2 .8" />
+    </svg>
+  );
+}
+
+export function ReactIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+    </svg>
+  );
+}
+
+export function NextJsIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 8v8M8 8l8 8M16 8v5" />
+    </svg>
+  );
+}
+
+export function ReactNativeIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <rect x="7" y="2" width="10" height="20" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+      <ellipse cx="12" cy="12" rx="6" ry="2.5" />
+      <ellipse cx="12" cy="12" rx="6" ry="2.5" transform="rotate(60 12 12)" />
+    </svg>
+  );
+}
+
+export function ExpoIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 16l4-9 4 9-4-2.5-4 2.5z" />
+    </svg>
+  );
+}
+
+export function NodeJsIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8 4.5v11L12 22l-8-4.5v-11L12 2z" />
+    </svg>
+  );
+}
+
+export function PostgreSqlIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <ellipse cx="12" cy="5" rx="8" ry="3" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+    </svg>
+  );
+}
+
+export function SupabaseIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" />
+    </svg>
+  );
+}
+
+export function TailwindIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 9c1-2 2.5-3 4.5-3s3.5 1.5 5.5 1.5S17.5 6 18.5 4M4 15c1-2 2.5-3 4.5-3s3.5 1.5 5.5 1.5 3.5-1.5 4.5-3.5" />
+    </svg>
+  );
+}
+
+export function MpesaIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <rect x="3" y="5" width="9" height="14" rx="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="17.5" cy="12" r="4.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M17.5 9.5v5M15.5 11h4M15.8 13h3.4" />
+    </svg>
+  );
+}
+
+export function EducationIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2 9l10-4 10 4-10 4-10-4z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6" />
+    </svg>
+  );
+}
+
+export function TransportIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2 7h11v10H2zM13 10h4l3 3v4h-7z" />
+      <circle cx="6.5" cy="18" r="1.5" />
+      <circle cx="16.5" cy="18" r="1.5" />
+    </svg>
+  );
+}
+
+export function HealthIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 20s-8-4.5-8-10a4.5 4.5 0 018-2.5A4.5 4.5 0 0120 10c0 5.5-8 10-8 10z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v5M9.5 10.5h5" />
+    </svg>
+  );
+}
+
+export function RetailIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 8h14l-1 12H6L5 8z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 8V6a4 4 0 018 0v2" />
+    </svg>
+  );
+}
+
+export function CommunityIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <circle cx="9" cy="8" r="3" />
+      <circle cx="17" cy="9" r="2.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.5c2.5.3 4.5 2.4 4.5 5" />
+    </svg>
+  );
+}
+
+export function RealEstateIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 11l9-7 9 7" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 10v10h14V10M10 20v-6h4v6" />
+    </svg>
+  );
+}
+
+export function EventsIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8a2 2 0 012-2h14a2 2 0 012 2v2a2 2 0 000 4v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 000-4V8z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeDasharray="2 2" d="M10 6v12" />
+    </svg>
+  );
+}
+
+export function FinanceIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+    </svg>
+  );
+}
+
 export function WhatsAppIcon() {
   return (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

@@ -94,3 +94,110 @@ export const aboutStrip = {
   points: ['Full-stack delivery', 'Local payment expertise', 'Long-term support'],
   cta: { label: 'More About Us', href: '/about' } satisfies CtaLink,
 };
+
+export type TechIcon =
+  | 'typescript'
+  | 'react'
+  | 'nextjs'
+  | 'reactnative'
+  | 'expo'
+  | 'nodejs'
+  | 'postgresql'
+  | 'supabase'
+  | 'tailwind'
+  | 'mpesa';
+
+export type TechItem = {
+  name: string;
+  icon: TechIcon;
+};
+
+export const techStack = {
+  heading: 'Technologies We Work With',
+  intro:
+    'A modern, proven toolkit that lets us ship fast without cutting corners on reliability.',
+  items: [
+    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'React', icon: 'react' },
+    { name: 'Next.js', icon: 'nextjs' },
+    { name: 'React Native', icon: 'reactnative' },
+    { name: 'Expo', icon: 'expo' },
+    { name: 'Node.js', icon: 'nodejs' },
+    { name: 'PostgreSQL', icon: 'postgresql' },
+    { name: 'Supabase', icon: 'supabase' },
+    { name: 'Tailwind CSS', icon: 'tailwind' },
+    { name: 'M-Pesa Daraja API', icon: 'mpesa' },
+  ] satisfies TechItem[],
+};
+
+export type IndustryIcon =
+  | 'education'
+  | 'transport'
+  | 'health'
+  | 'retail'
+  | 'community'
+  | 'realestate'
+  | 'events'
+  | 'finance';
+
+export type Industry = {
+  name: string;
+  icon: IndustryIcon;
+};
+
+export const industries = {
+  heading: 'Industries We Serve',
+  intro: 'We build for the sectors driving everyday business across Kenya.',
+  items: [
+    { name: 'Education & Training', icon: 'education' },
+    { name: 'Transport & Logistics', icon: 'transport' },
+    { name: 'Health & Wellness', icon: 'health' },
+    { name: 'Retail & E-Commerce', icon: 'retail' },
+    { name: 'Faith & Community', icon: 'community' },
+    { name: 'Real Estate', icon: 'realestate' },
+    { name: 'Events & Ticketing', icon: 'events' },
+    { name: 'Financial Services', icon: 'finance' },
+  ] satisfies Industry[],
+};
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  location: string;
+};
+
+export const testimonials = {
+  heading: 'What Our Clients Say',
+  items: [
+    {
+      quote:
+        'Before Silvacal built our operations platform, student bookings, instructor schedules, and fee tracking lived in three different notebooks. Now our whole team runs off one dashboard, and parents can pay and book lessons online.',
+      name: 'Janet Mwangi',
+      role: 'Director, Starline Driving School',
+      location: 'Nairobi',
+    },
+    {
+      quote:
+        "We needed an online shop where customers could pay by M-Pesa without calling us to confirm. Silvacal built that in weeks, and our online orders now bring in more than our walk-in counter on a good day.",
+      name: 'Brian Otieno',
+      role: 'Owner, Otieno Electronics',
+      location: 'Nairobi',
+    },
+    {
+      quote:
+        'Our annual conference used to mean printing tickets and chasing M-Pesa confirmations by hand. The platform Silvacal built handles registration, payments, and check-in, and our volunteers finally get to enjoy the event too.',
+      name: 'Faith Wanjiru',
+      role: 'Programs Coordinator, Tumaini Community Network',
+      location: 'Kiambu',
+    },
+  ] satisfies Testimonial[],
+};
+
+export const ctaBand = {
+  heading: 'Have a Project in Mind?',
+  sentence:
+    "Tell us what you're trying to build and we'll come back with a clear plan and a quote within one business day.",
+  primaryCta: { label: 'Get a Free Quote', href: '/contact' } satisfies CtaLink,
+  secondaryCtaLabel: 'Chat on WhatsApp',
+};
