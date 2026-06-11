@@ -1,3 +1,15 @@
+import Hero from '@/components/Hero';
+import StatsBar from '@/components/StatsBar';
+import ServicesGrid from '@/components/ServicesGrid';
+import AboutStrip from '@/components/AboutStrip';
+
 export default function HomePage() {
-  return <h1 className="px-4 py-24 text-center font-heading text-4xl text-navy">Home</h1>;
+  return (
+    <>
+      <Hero />
+      <StatsBar />
+      <ServicesGrid />
+      <AboutStrip />
+    </>
+  );
 }

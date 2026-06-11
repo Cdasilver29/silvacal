@@ -30,6 +30,68 @@ export function XIcon() {
   );
 }
 
+export function CheckIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+export function CodeIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12" />
+    </svg>
+  );
+}
+
+export function GlobeIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h18M12 3c2.5 2.6 4 5.9 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.9-4-9s1.5-6.4 4-9z" />
+    </svg>
+  );
+}
+
+export function SmartphoneIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <rect x="6" y="2" width="12" height="20" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M11 18h2" />
+    </svg>
+  );
+}
+
+export function WalletIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <rect x="3" y="6" width="18" height="13" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M16 14h2" />
+    </svg>
+  );
+}
+
+export function MegaphoneIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 11v2a2 2 0 002 2h1l3 5V8L6 9H5a2 2 0 00-2 2zm6-2l9-4v14l-9-4" />
+    </svg>
+  );
+}
+
+export function PaletteIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 110-18 8 8 0 018 8c0 2-1 3-3 3h-2a1.5 1.5 0 00-1 2.6c.4.4.6.9.6 1.4 0 1.1-1.2 2-2.6 2z" />
+      <circle cx="7.5" cy="11.5" r="1" fill="currentColor" />
+      <circle cx="9.5" cy="7.5" r="1" fill="currentColor" />
+      <circle cx="14.5" cy="7" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function WhatsAppIcon() {
   return (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
