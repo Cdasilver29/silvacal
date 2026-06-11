@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
 import { CheckIcon } from '@/components/icons';
-import { packagesHero, packageGroups, packagesSeo } from '@/data/packages';
+import { packagesHero, packageGroups, packagesFaqs, packagesSeo } from '@/data/packages';
 
 export const metadata: Metadata = {
   title: packagesSeo.title,
@@ -76,6 +76,30 @@ export default function PackagesPage() {
           </div>
         </section>
       ))}
+
+      <section className="bg-background">
+        <div className="mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 space-y-4">
+            {packagesFaqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-2xl border border-silver/40 p-6 open:border-electric"
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-heading text-lg font-semibold text-navy [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span className="shrink-0 text-electric transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-body/80">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CtaBand />
     </>

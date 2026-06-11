@@ -144,3 +144,26 @@ export const packagesSeo = {
   description:
     'Transparent starting prices for website design, mobile apps, M-Pesa integration, and digital marketing from Silvacal Technologies. Free custom quotes for every project.',
 };
+
+export type PackageFaq = {
+  question: string;
+  answer: string;
+};
+
+export const packagesFaqs: PackageFaq[] = [
+  {
+    question: 'What does "from" pricing mean?',
+    answer:
+      'The prices shown are starting points for a typical project at that scope. Your final quote depends on the number of pages or screens, integrations, and any custom features you need. We always confirm a fixed price in writing before work begins, so there are no surprises later.',
+  },
+  {
+    question: 'What are your payment terms?',
+    answer:
+      'Most projects follow a 50% deposit to begin work and 50% on delivery. For larger engagements, we can split payments into milestones tied to project phases. Monthly plans, such as digital marketing retainers, are billed at the start of each month.',
+  },
+  {
+    question: 'What is not included in the price?',
+    answer:
+      'Quoted prices cover our design and development work only. They do not include third-party costs such as web hosting, domain registration, SSL certificates, app store developer accounts, or fees charged by payment providers like M-Pesa. We help you set these up and explain ongoing costs upfront.',
+  },
+];
