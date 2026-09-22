@@ -23,7 +23,7 @@ const delays = ['', 'delay-150', 'delay-300'];
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-background">
+    <section id="services" className="scroll-mt-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">What We Do</h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

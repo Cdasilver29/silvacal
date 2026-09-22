@@ -38,7 +38,7 @@ export default function ServicePage({ service }: { service: Service }) {
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/services" className="hover:text-electric">
+            <Link href="/#services" className="hover:text-electric">
               Services
             </Link>
             <span className="mx-2">/</span>

@@ -12,6 +12,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 
 const servicesItem = navItems.find((item) => item.label === 'Services');
 const quickLinks = navItems.filter((item) => !item.children);
+const enabledSocialLinks = socialLinks.filter((social) => social.enabled);
 
 export default function Footer() {
   return (
@@ -71,18 +72,20 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <div className="mt-4 flex gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="transition hover:text-electric"
-              >
-                {socialIcons[social.label]}
-              </a>
-            ))}
-          </div>
+          {enabledSocialLinks.length > 0 && (
+            <div className="mt-4 flex gap-4">
+              {enabledSocialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="transition hover:text-electric"
+                >
+                  {socialIcons[social.label]}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

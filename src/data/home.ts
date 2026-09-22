@@ -167,31 +167,16 @@ export type Testimonial = {
   location: string;
 };
 
+// Add real, client-approved testimonials here, then re-enable the homepage import.
+// {
+//   quote: '',
+//   name: '',
+//   role: '',
+//   location: '',
+// },
 export const testimonials = {
   heading: 'What Our Clients Say',
-  items: [
-    {
-      quote:
-        'Before Silvacal built our operations platform, student bookings, instructor schedules, and fee tracking lived in three different notebooks. Now our whole team runs off one dashboard, and parents can pay and book lessons online.',
-      name: 'Janet Mwangi',
-      role: 'Director, Starline Driving School',
-      location: 'Nairobi',
-    },
-    {
-      quote:
-        "We needed an online shop where customers could pay by M-Pesa without calling us to confirm. Silvacal built that in weeks, and our online orders now bring in more than our walk-in counter on a good day.",
-      name: 'Brian Otieno',
-      role: 'Owner, Otieno Electronics',
-      location: 'Nairobi',
-    },
-    {
-      quote:
-        'Our annual conference used to mean printing tickets and chasing M-Pesa confirmations by hand. The platform Silvacal built handles registration, payments, and check-in, and our volunteers finally get to enjoy the event too.',
-      name: 'Faith Wanjiru',
-      role: 'Programs Coordinator, Tumaini Community Network',
-      location: 'Kiambu',
-    },
-  ] satisfies Testimonial[],
+  items: [] as Testimonial[],
 };
 
 export const ctaBand = {

@@ -5,7 +5,8 @@ import ServicesGrid from '@/components/ServicesGrid';
 import AboutStrip from '@/components/AboutStrip';
 import TechStack from '@/components/TechStack';
 import Industries from '@/components/Industries';
-import Testimonials from '@/components/Testimonials';
+// Restore once real testimonials exist in src/data/home.ts:
+// import Testimonials from '@/components/Testimonials';
 import CtaBand from '@/components/CtaBand';
 import { homeSeo } from '@/data/home';
 import { buildMetadata } from '@/lib/seo';
@@ -25,7 +26,7 @@ export default function HomePage() {
       <AboutStrip />
       <TechStack />
       <Industries />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CtaBand />
     </>
   );

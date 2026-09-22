@@ -5,7 +5,7 @@ import Reveal from '@/components/Reveal';
 
 export default function CtaBand() {
   return (
-    <section className="relative overflow-hidden bg-navy">
+    <section className="relative overflow-hidden border-t border-silver/10 bg-navy">
       <div
         className="pointer-events-none absolute inset-0"
         style={{

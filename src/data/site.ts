@@ -29,7 +29,7 @@ export const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   {
     label: 'Services',
-    href: '/services',
+    href: '/#services',
     children: [
       { label: 'Software Development', href: '/services/software-development' },
       { label: 'Web Development', href: '/services/web-development' },
@@ -48,11 +48,12 @@ export const navItems: NavItem[] = [
 export type SocialLink = {
   label: string;
   href: string;
+  enabled: boolean;
 };
 
 export const socialLinks: SocialLink[] = [
-  { label: 'Facebook', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'X', href: '#' },
+  { label: 'Facebook', href: '', enabled: false },
+  { label: 'Instagram', href: '', enabled: false },
+  { label: 'LinkedIn', href: '', enabled: false },
+  { label: 'X', href: '', enabled: false },
 ];
