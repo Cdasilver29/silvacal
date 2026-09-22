@@ -35,6 +35,7 @@ export const navItems: NavItem[] = [
       { label: 'Web Development', href: '/services/web-development' },
       { label: 'Mobile App Development', href: '/services/mobile-app-development' },
       { label: 'M-Pesa Integration', href: '/services/mpesa-integration' },
+      { label: 'Data & AI', href: '/services/data-ai' },
       { label: 'Digital Marketing', href: '/services/digital-marketing' },
       { label: 'Branding & Identity', href: '/services/branding-identity' },
     ],

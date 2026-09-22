@@ -73,6 +73,14 @@ export function WalletIcon() {
   );
 }
 
+export function ChartIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M18 17V9M13 17V5M8 17v-3" />
+    </svg>
+  );
+}
+
 export function MegaphoneIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">

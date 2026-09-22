@@ -188,6 +188,85 @@ export const services: Service[] = [
     },
   },
   {
+    slug: 'data-ai',
+    name: 'Data & AI',
+    tagline: 'Turn the data your business already has into decisions',
+    intro:
+      'Most Kenyan businesses sit on valuable data spread across spreadsheets, M-Pesa statements, and their own systems, without a way to see what it is telling them. We consolidate that data, build reporting your team actually uses, and add AI features where they save real time, so decisions rest on current numbers rather than guesswork.',
+    offerings: [
+      {
+        title: 'Business Intelligence Dashboards',
+        description:
+          "Management reporting built on live data, not month-old spreadsheets someone has to update by hand. Sales, collections, and operations figures refresh automatically, so you see this week's position this week.",
+      },
+      {
+        title: 'Data Pipelines & Warehousing',
+        description:
+          'We consolidate data from your POS, accounting software, M-Pesa statements, and internal systems into one queryable source. Every report then draws from the same numbers, ending the debate over whose spreadsheet is right.',
+      },
+      {
+        title: 'Data Cleaning & Migration',
+        description:
+          'We move you off spreadsheets and legacy systems without losing years of history. Duplicates, inconsistent formats, and missing records are resolved and documented before anything goes live.',
+      },
+      {
+        title: 'Analytics & Reporting',
+        description:
+          'Recurring reports and ad-hoc analysis for the operational and financial decisions in front of you, from branch performance to customer retention. Findings come in plain language with the numbers behind them, not just charts.',
+      },
+      {
+        title: 'AI Integration',
+        description:
+          'We add LLM-powered features to products you already run: document processing, customer support assistance, and content generation. Each feature is scoped to a measurable task, with human review built in where accuracy matters.',
+      },
+    ],
+    process: [
+      {
+        title: 'Decision Mapping',
+        description:
+          'We start with the decisions you need to make and the questions you cannot answer today, so everything we build serves a real use.',
+      },
+      {
+        title: 'Data Assessment',
+        description:
+          'We map the data you already have, where it lives, and how reliable it is, and tell you plainly what it can and cannot support.',
+      },
+      {
+        title: 'Pipeline & Reporting Build',
+        description:
+          'We build the pipelines that pull your data together and the reporting layer on top, reviewing early versions with you as we go.',
+      },
+      {
+        title: 'Handover & Training',
+        description:
+          'We hand over with documentation and train your team to read, trust, and maintain the reports, with support available afterwards.',
+      },
+    ],
+    technologies: ['Python', 'SQL', 'PostgreSQL', 'BigQuery', 'dbt', 'Looker Studio', 'Power BI', 'Pandas', 'Claude API', 'OpenAI API'],
+    faqs: [
+      {
+        question: 'What does my business need before starting?',
+        answer:
+          'Any consistent source of data is enough to begin, even spreadsheets kept by hand. If your records are regular and cover a reasonable period, we can work with them, and part of our assessment is telling you honestly where gaps will limit the results.',
+      },
+      {
+        question: 'How is this different from hiring a data analyst?',
+        answer:
+          'An analyst typically produces reports on request, and when they leave, the work often goes with them. We build systems that keep running: pipelines that refresh on their own and dashboards your team can use without us, with documentation so anyone can maintain them.',
+      },
+      {
+        question: 'Are AI features worth it yet for a small business?',
+        answer:
+          'Sometimes. They pay off where your team spends hours on repetitive text work, such as reading invoices, drafting routine replies, or summarising documents, and where a person can check the output. They are rarely worth it as a novelty or where every answer must be correct with no review, so we recommend starting with one small, measurable use case before committing further.',
+      },
+    ],
+    seo: {
+      title: 'Data Analytics & AI Services in Kenya',
+      description:
+        'Business intelligence dashboards, data pipelines, and practical AI integration for Kenyan businesses. Turn spreadsheets and M-Pesa data into decisions with Silvacal Technologies.',
+    },
+  },
+  {
     slug: 'web-development',
     name: 'Web Development',
     tagline: 'Websites that load fast, rank well, and turn visitors into customers',

@@ -30,6 +30,7 @@ export type ServiceIcon =
   | 'globe'
   | 'smartphone'
   | 'wallet'
+  | 'chart'
   | 'megaphone'
   | 'palette';
 
@@ -68,6 +69,13 @@ export const services: Service[] = [
       'Daraja API integrations for STK Push, paybills, and till numbers, wired directly into your platform so payments simply work.',
     href: '/services/mpesa-integration',
     icon: 'wallet',
+  },
+  {
+    title: 'Data & AI',
+    description:
+      'Dashboards, data pipelines, and practical AI features that turn spreadsheets and M-Pesa records into decisions you can act on.',
+    href: '/services/data-ai',
+    icon: 'chart',
   },
   {
     title: 'Digital Marketing',
