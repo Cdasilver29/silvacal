@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <dt className="font-heading text-sm font-semibold text-navy">Phone</dt>
                 {contactInfo.phones.map((phone) => (
                   <dd key={phone.e164} className="mt-1">
-                    <a href={`tel:${phone.e164}`} className="transition hover:text-electric">
+                    <a href={`tel:${phone.e164}`} className="inline-flex min-h-11 items-center transition hover:text-electric-strong">
                       {phone.display}
                     </a>
                   </dd>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 <dd className="mt-1">
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="transition hover:text-electric"
+                    className="inline-flex min-h-11 items-center transition hover:text-electric-strong"
                   >
                     {contactInfo.email}
                   </a>
@@ -76,7 +76,7 @@ export default function ContactPage() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn mt-8 inline-flex items-center gap-3 rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
+              className="btn mt-8 inline-flex items-center gap-3 rounded-2xl bg-electric-strong px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               <WhatsAppIcon />
               Chat on WhatsApp

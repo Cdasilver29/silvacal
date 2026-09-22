@@ -70,7 +70,7 @@ export default function PortfolioPage() {
                         ))}
                       </div>
                       {project.hasDetail && (
-                        <span className="mt-6 font-heading text-sm font-semibold text-electric">
+                        <span className="mt-6 font-heading text-sm font-semibold text-electric-strong">
                           Read the case study{' '}
                           <span className="inline-block transition group-hover:translate-x-1">→</span>
                         </span>

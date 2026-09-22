@@ -47,11 +47,11 @@ export default function PortfolioDetailPage({ params }: Props) {
         />
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <nav aria-label="Breadcrumb" className="font-heading text-sm text-silver/70">
-            <Link href="/" className="hover:text-electric">
+            <Link href="/" className="tap-target hover:text-electric">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/portfolio" className="hover:text-electric">
+            <Link href="/portfolio" className="tap-target hover:text-electric">
               Portfolio
             </Link>
             <span className="mx-2">/</span>
@@ -100,7 +100,7 @@ export default function PortfolioDetailPage({ params }: Props) {
           </div>
           <Link
             href="/portfolio"
-            className="mt-16 inline-block font-heading text-sm font-semibold text-electric hover:underline"
+            className="mt-12 inline-flex min-h-11 items-center font-heading text-sm font-semibold text-electric-strong hover:underline"
           >
             ← Back to portfolio
           </Link>

@@ -39,19 +39,19 @@ export default function PackagesPage() {
             </h2>
             <Reveal
               stagger
-              className={`mt-10 grid gap-6 sm:grid-cols-2 ${
-                group.tiers.length === 3 ? 'lg:grid-cols-3' : 'mx-auto lg:max-w-3xl'
+              className={`mt-10 flex flex-wrap justify-center gap-6 ${
+                group.tiers.length === 3 ? '' : 'mx-auto lg:max-w-3xl'
               }`}
             >
               {group.tiers.map((tier) => (
                 <div
                   key={tier.name}
-                  className={`card-tilt relative flex flex-col rounded-2xl border p-6 transition ${
-                    tier.popular ? 'border-electric' : 'border-silver/40'
-                  }`}
+                  className={`card-tilt relative flex w-full flex-col rounded-2xl border p-6 transition sm:w-[calc(50%-12px)] ${
+                    group.tiers.length === 3 ? 'lg:w-[calc(33.333%-16px)]' : ''
+                  } ${tier.popular ? 'border-electric' : 'border-silver/40'}`}
                 >
                   {tier.popular && (
-                    <span className="badge-pulse absolute -top-3 left-6 rounded-full bg-electric px-3 py-1 font-heading text-xs font-semibold text-white">
+                    <span className="badge-pulse absolute -top-3 left-6 rounded-full bg-electric-strong px-3 py-1 font-heading text-xs font-semibold text-white">
                       Most Popular
                     </span>
                   )}
@@ -67,7 +67,7 @@ export default function PackagesPage() {
                   </ul>
                   <Link
                     href="/contact"
-                    className="btn mt-6 inline-block rounded-2xl bg-electric px-6 py-3 text-center font-heading text-sm font-semibold text-white"
+                    className="btn mt-6 inline-block rounded-2xl bg-electric-strong px-6 py-3 text-center font-heading text-sm font-semibold text-white"
                   >
                     Get Started
                   </Link>
@@ -91,7 +91,7 @@ export default function PackagesPage() {
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-4 font-heading text-lg font-semibold text-navy [&::-webkit-details-marker]:hidden">
                   {faq.question}
-                  <span className="shrink-0 text-electric transition group-open:rotate-45">
+                  <span aria-hidden="true" className="shrink-0 text-electric-strong transition group-open:rotate-45">
                     +
                   </span>
                 </summary>

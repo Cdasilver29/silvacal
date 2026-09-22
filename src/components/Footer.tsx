@@ -35,10 +35,10 @@ export default function Footer() {
 
         <div>
           <h3 className="font-heading text-base font-semibold text-white">Services</h3>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col gap-6 md:gap-2">
             {servicesItem?.children?.map((child) => (
               <li key={child.href}>
-                <Link href={child.href} className="text-sm link-draw hover:text-electric">
+                <Link href={child.href} className="tap-target link-draw text-sm hover:text-electric">
                   {child.label}
                 </Link>
               </li>
@@ -48,10 +48,10 @@ export default function Footer() {
 
         <div>
           <h3 className="font-heading text-base font-semibold text-white">Quick Links</h3>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col gap-6 md:gap-2">
             {quickLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-sm link-draw hover:text-electric">
+                <Link href={item.href} className="tap-target link-draw text-sm hover:text-electric">
                   {item.label}
                 </Link>
               </li>
@@ -61,17 +61,17 @@ export default function Footer() {
 
         <div>
           <h3 className="font-heading text-base font-semibold text-white">Contact</h3>
-          <ul className="mt-4 flex flex-col gap-2 text-sm">
+          <ul className="mt-4 flex flex-col gap-6 text-sm md:gap-2">
             <li>{contactInfo.location}</li>
             {contactInfo.phones.map((phone) => (
               <li key={phone.e164}>
-                <a href={`tel:${phone.e164}`} className="link-draw hover:text-electric">
+                <a href={`tel:${phone.e164}`} className="tap-target link-draw hover:text-electric">
                   {phone.display}
                 </a>
               </li>
             ))}
             <li>
-              <a href={`mailto:${contactInfo.email}`} className="link-draw hover:text-electric">
+              <a href={`mailto:${contactInfo.email}`} className="tap-target link-draw hover:text-electric">
                 {contactInfo.email}
               </a>
             </li>
@@ -95,11 +95,11 @@ export default function Footer() {
 
       <div className="border-t border-silver/20 px-4 py-6 text-center text-sm text-silver/70">
         <p>© 2026 Silvacal Technologies. All rights reserved</p>
-        <div className="mt-2 flex justify-center gap-4">
-          <Link href="/privacy" className="link-draw hover:text-electric">
+        <div className="mt-4 flex justify-center gap-6">
+          <Link href="/privacy" className="tap-target link-draw hover:text-electric">
             Privacy Policy
           </Link>
-          <Link href="/terms" className="link-draw hover:text-electric">
+          <Link href="/terms" className="tap-target link-draw hover:text-electric">
             Terms of Service
           </Link>
         </div>

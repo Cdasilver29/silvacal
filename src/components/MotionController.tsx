@@ -55,6 +55,10 @@ export default function MotionController() {
       window.removeEventListener('scroll', backstop);
       window.removeEventListener('resize', backstop);
     };
+    const onFocusIn = (e: FocusEvent) => {
+      const el = (e.target as HTMLElement).closest<HTMLElement>('.reveal-armed');
+      if (el) reveal(el);
+    };
 
     let observer: IntersectionObserver;
     try {
@@ -72,6 +76,7 @@ export default function MotionController() {
       });
       window.addEventListener('scroll', backstop, { passive: true });
       window.addEventListener('resize', backstop);
+      document.addEventListener('focusin', onFocusIn);
     } catch {
       armed.forEach((el) => el.classList.remove('reveal-armed'));
       return;
@@ -79,6 +84,7 @@ export default function MotionController() {
 
     return () => {
       removeBackstop();
+      document.removeEventListener('focusin', onFocusIn);
       observer.disconnect();
       armed.forEach((el) => el.classList.remove('reveal-armed', 'reveal-in'));
     };

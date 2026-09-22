@@ -38,6 +38,25 @@ body {
   background-color: #FFFFFF;
 }
 
+/* Visible keyboard focus everywhere; #2563EB is >= 3:1 on both white and navy. */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Extends small text links to a 44px hit area on mobile without changing layout. */
+@media (max-width: 767px) {
+  .tap-target {
+    position: relative;
+  }
+
+  .tap-target::before {
+    content: '';
+    position: absolute;
+    inset: -14px 0;
+  }
+}
+
 /* ---- Motion system ----
    Every hidden or moving state lives under no-preference, and the reveal states
    only apply once MotionController adds .reveal-armed after mount. */

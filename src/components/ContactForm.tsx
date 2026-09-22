@@ -18,7 +18,7 @@ const initialFormState = {
 };
 
 const inputClasses =
-  'w-full rounded-2xl border border-silver/40 bg-background px-4 py-3 text-body focus:border-electric focus:outline-none';
+  'w-full rounded-2xl border border-silver/40 bg-background px-4 py-3 text-body focus:border-electric';
 
 export default function ContactForm({ serviceOptions }: { serviceOptions: ServiceOption[] }) {
   const [form, setForm] = useState(initialFormState);
@@ -193,7 +193,7 @@ export default function ContactForm({ serviceOptions }: { serviceOptions: Servic
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="btn mt-2 rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white disabled:opacity-60 disabled:hover:scale-100"
+        className="btn mt-2 rounded-2xl bg-electric-strong px-6 py-3 font-heading text-sm font-semibold text-white disabled:opacity-60 disabled:hover:scale-100"
       >
         {status === 'loading' ? 'Sending...' : 'Send Request'}
       </button>
@@ -207,7 +207,7 @@ export default function ContactForm({ serviceOptions }: { serviceOptions: Servic
       {status === 'error' && (
         <p className="rounded-2xl border border-silver/40 p-4 text-sm text-body/80">
           Something went wrong sending your message. Please try again, or message us directly on{' '}
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="font-medium text-electric">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="font-medium text-electric-strong">
             WhatsApp
           </a>
           .

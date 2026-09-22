@@ -34,11 +34,11 @@ export default function ServicePage({ service }: { service: Service }) {
         />
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <nav aria-label="Breadcrumb" className="font-heading text-sm text-silver/70">
-            <Link href="/" className="hover:text-electric">
+            <Link href="/" className="tap-target hover:text-electric">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/#services" className="hover:text-electric">
+            <Link href="/#services" className="tap-target hover:text-electric">
               Services
             </Link>
             <span className="mx-2">/</span>
@@ -54,7 +54,7 @@ export default function ServicePage({ service }: { service: Service }) {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="btn inline-block rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
+              className="btn inline-block rounded-2xl bg-electric-strong px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               Get a Quote
             </Link>
@@ -133,7 +133,7 @@ export default function ServicePage({ service }: { service: Service }) {
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-4 font-heading text-lg font-semibold text-navy [&::-webkit-details-marker]:hidden">
                   {faq.question}
-                  <span className="shrink-0 text-electric transition group-open:rotate-45">
+                  <span aria-hidden="true" className="shrink-0 text-electric-strong transition group-open:rotate-45">
                     +
                   </span>
                 </summary>

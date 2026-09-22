@@ -7,7 +7,8 @@ const config: Config = {
       colors: {
         navy: '#0F172A',
         silver: '#C0C0C0',
-        electric: '#3B82F6',
+        // DEFAULT for navy backgrounds and decoration; strong passes WCAG AA on white and under white text
+        electric: { DEFAULT: '#3B82F6', strong: '#2563EB' },
         background: '#FFFFFF',
         body: '#1F2937',
       },

@@ -79,9 +79,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <a
+          href="#main"
+          className="sr-only z-[70] rounded-2xl bg-electric-strong px-4 py-3 font-heading text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        >
+          Skip to content
+        </a>
         <ScrollProgress />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">{children}</main>
         <Footer />
         <WhatsAppButton />
         <MotionController />

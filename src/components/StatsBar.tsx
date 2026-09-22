@@ -6,7 +6,7 @@ import { stats, type Stat } from '@/data/home';
 type Phase = 'static' | 'armed' | 'counting';
 
 // Server HTML shows the final numbers with underlines drawn. JS only resets them
-// to zero when the bar is below the fold and motion is allowed.
+// to zero once hydrated and only when motion is allowed.
 function StatItem({ stat, phase }: { stat: Stat; phase: Phase }) {
   const [count, setCount] = useState(stat.value);
   const [drawn, setDrawn] = useState(true);
@@ -56,11 +56,17 @@ export default function StatsBar() {
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || !('IntersectionObserver' in window)) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (node.getBoundingClientRect().top <= window.innerHeight) return;
+    if (!node || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     setPhase('armed');
+
+    // Deliberate exception to the reveal rule: stats count up even when already
+    // on screen at mount, after a short pause so the page settles first.
+    if (node.getBoundingClientRect().top <= window.innerHeight || !('IntersectionObserver' in window)) {
+      const id = window.setTimeout(() => setPhase('counting'), 300);
+      return () => window.clearTimeout(id);
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

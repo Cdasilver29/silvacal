@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="hero-step mt-8 flex flex-wrap gap-4" style={{ '--hero-delay': '240ms' } as React.CSSProperties}>
             <Link
               href={hero.primaryCta.href}
-              className="btn btn-sheen rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
+              className="btn btn-sheen rounded-2xl bg-electric-strong px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               {hero.primaryCta.label}
             </Link>

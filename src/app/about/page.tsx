@@ -41,7 +41,7 @@ export default function AboutPage() {
         />
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <nav aria-label="Breadcrumb" className="font-heading text-sm text-silver/70">
-            <Link href="/" className="hover:text-electric">
+            <Link href="/" className="tap-target hover:text-electric">
               Home
             </Link>
             <span className="mx-2">/</span>

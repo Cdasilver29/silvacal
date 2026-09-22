@@ -22,7 +22,7 @@ export default function CtaBand() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href={ctaBand.primaryCta.href}
-              className="btn btn-sheen rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
+              className="btn btn-sheen rounded-2xl bg-electric-strong px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               {ctaBand.primaryCta.label}
             </Link>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { navItems } from '@/data/site';
@@ -9,6 +9,22 @@ import { MenuIcon, CloseIcon } from '@/components/icons';
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesButtonRef = useRef<HTMLButtonElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Mobile menu: move focus in on open, Escape closes and returns focus to the toggle
+  useEffect(() => {
+    if (!mobileOpen) return;
+    closeButtonRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      setMobileOpen(false);
+      menuButtonRef.current?.focus();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-silver/30 bg-background">
@@ -28,13 +44,13 @@ export default function Header() {
             <span className="font-heading text-lg font-bold tracking-tight text-navy md:text-xl">
               SILVACAL
             </span>
-            <span className="mt-1 text-[10px] font-semibold tracking-[0.3em] text-body/60">
+            <span className="mt-1 text-[10px] font-semibold tracking-[0.3em] text-body/70">
               TECHNOLOGIES
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) =>
             item.children ? (
               <div
@@ -42,20 +58,32 @@ export default function Header() {
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
+                onKeyDown={(e) => {
+                  if (e.key !== 'Escape') return;
+                  setServicesOpen(false);
+                  servicesButtonRef.current?.focus();
+                }}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setServicesOpen(false);
+                }}
               >
                 <button
-                  className="font-heading text-sm font-medium text-navy transition hover:text-electric"
+                  ref={servicesButtonRef}
+                  className="font-heading text-sm font-medium text-navy transition hover:text-electric-strong"
                   aria-expanded={servicesOpen}
+                  aria-controls="services-menu"
+                  onClick={() => setServicesOpen((open) => !open)}
                 >
                   {item.label}
                 </button>
                 {servicesOpen && (
-                  <div className="absolute left-0 top-full w-64 rounded-2xl border border-silver/30 bg-background py-2 shadow-lg">
+                  <div id="services-menu" className="absolute left-0 top-full w-64 rounded-2xl border border-silver/30 bg-background py-2 shadow-lg">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2 text-sm text-body transition hover:text-electric"
+                        className="block px-4 py-2 text-sm text-body transition hover:text-electric-strong"
+                        onClick={() => setServicesOpen(false)}
                       >
                         {child.label}
                       </Link>
@@ -67,7 +95,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-heading text-sm font-medium text-navy transition hover:text-electric"
+                className="font-heading text-sm font-medium text-navy transition hover:text-electric-strong"
               >
                 {item.label}
               </Link>
@@ -75,14 +103,15 @@ export default function Header() {
           )}
           <Link
             href="/contact"
-            className="btn rounded-2xl bg-electric px-5 py-2 font-heading text-sm font-medium text-white"
+            className="btn rounded-2xl bg-electric-strong px-5 py-2 font-heading text-sm font-medium text-white"
           >
             Get a Quote
           </Link>
         </nav>
 
         <button
-          className="md:hidden"
+          ref={menuButtonRef}
+          className="-mr-2 flex h-11 w-11 items-center justify-center lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -92,35 +121,36 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-navy/40 md:hidden" onClick={() => setMobileOpen(false)}>
+        <div className="fixed inset-0 z-40 bg-navy/40 lg:hidden" onClick={() => setMobileOpen(false)}>
           <div
-            className="absolute right-0 top-0 h-full w-72 bg-background p-6 shadow-lg"
+            className="absolute right-0 top-0 h-full w-72 overflow-y-auto bg-background p-6 shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="mb-6 ml-auto block"
+              ref={closeButtonRef}
+              className="-mr-2 mb-4 ml-auto flex h-11 w-11 items-center justify-center"
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             >
               <CloseIcon />
             </button>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link
                     href={item.href}
-                    className="font-heading text-base font-medium text-navy transition hover:text-electric"
+                    className="flex min-h-11 items-center font-heading text-base font-medium text-navy transition hover:text-electric-strong"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}
                   </Link>
                   {item.children && (
-                    <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <div className="ml-4 flex flex-col">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="text-sm text-body transition hover:text-electric"
+                          className="flex min-h-11 items-center text-sm text-body transition hover:text-electric-strong"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.label}
@@ -132,7 +162,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="btn mt-2 rounded-2xl bg-electric px-5 py-2 text-center font-heading text-sm font-medium text-white"
+                className="btn mt-4 flex min-h-11 items-center justify-center rounded-2xl bg-electric-strong px-5 py-2 text-center font-heading text-sm font-medium text-white"
                 onClick={() => setMobileOpen(false)}
               >
                 Get a Quote

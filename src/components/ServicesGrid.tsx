@@ -42,7 +42,7 @@ export default function ServicesGrid() {
                   <p className="mt-2 text-sm text-body/80">{service.description}</p>
                   <Link
                     href={service.href}
-                    className="mt-auto self-start pt-4 text-sm font-medium text-electric"
+                    className="mt-auto inline-flex min-h-11 items-center self-start pt-2 text-sm font-medium text-electric-strong"
                   >
                     Learn more{' '}
                     <span className="inline-block transition group-hover:translate-x-1">→</span>
