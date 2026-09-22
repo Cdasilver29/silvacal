@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { navItems } from '@/data/site';
+import { MenuIcon, CloseIcon } from '@/components/icons';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -76,9 +77,7 @@ export default function Header() {
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          <MenuIcon />
         </button>
       </div>
 
@@ -93,9 +92,7 @@ export default function Header() {
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <CloseIcon />
             </button>
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (

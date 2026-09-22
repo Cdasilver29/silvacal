@@ -3,6 +3,7 @@ import ContactForm from '@/components/ContactForm';
 import { WhatsAppIcon } from '@/components/icons';
 import { contactInfo, whatsappLink } from '@/data/site';
 import { contactHero, businessHours, contactSeo } from '@/data/contact';
+import { serviceOptions } from '@/data/services';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
@@ -85,7 +86,7 @@ export default function ContactPage() {
           <div>
             <h2 className="font-heading text-2xl font-bold text-navy">Request a Quote</h2>
             <div className="mt-6">
-              <ContactForm />
+              <ContactForm serviceOptions={serviceOptions} />
             </div>
           </div>
         </div>

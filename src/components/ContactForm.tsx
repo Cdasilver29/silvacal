@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { services } from '@/data/services';
+import type { ServiceOption } from '@/data/services';
 import { budgetRanges, web3FormsAccessKey } from '@/data/contact';
 import { whatsappLink } from '@/data/site';
 
@@ -20,7 +20,7 @@ const initialFormState = {
 const inputClasses =
   'w-full rounded-2xl border border-silver/40 bg-background px-4 py-3 text-body focus:border-electric focus:outline-none';
 
-export default function ContactForm() {
+export default function ContactForm({ serviceOptions }: { serviceOptions: ServiceOption[] }) {
   const [form, setForm] = useState(initialFormState);
   const [status, setStatus] = useState<Status>('idle');
 
@@ -144,7 +144,7 @@ export default function ContactForm() {
             <option value="" disabled>
               Select a service
             </option>
-            {services.map((service) => (
+            {serviceOptions.map((service) => (
               <option key={service.slug} value={service.name}>
                 {service.name}
               </option>

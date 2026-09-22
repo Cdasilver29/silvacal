@@ -584,6 +584,12 @@ export const services: Service[] = [
   },
 ];
 
+export type ServiceOption = Pick<Service, 'slug' | 'name'>;
+
+// Lightweight list for client components; pass it as a prop from a server
+// component so the full service content stays out of the client bundle.
+export const serviceOptions: ServiceOption[] = services.map(({ slug, name }) => ({ slug, name }));
+
 export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((service) => service.slug === slug);
 }

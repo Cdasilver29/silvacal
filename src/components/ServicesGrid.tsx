@@ -36,15 +36,15 @@ export default function ServicesGrid() {
                 key={service.href}
                 className={`w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] ${delays[index % 4]}`}
               >
-                <div className="group h-full rounded-2xl border border-silver/40 p-6 transition hover:-translate-y-1 hover:border-electric hover:shadow-lg">
+                <div className="group flex h-full flex-col rounded-2xl border border-silver/40 p-6 transition hover:-translate-y-1 hover:border-electric hover:shadow-lg">
                   <Icon />
-                  <h3 className="mt-4 font-heading text-lg font-semibold text-navy">
+                  <h3 className="mt-4 text-balance font-heading text-lg lg:min-h-[3.5rem] xl:min-h-0 font-semibold text-navy">
                     {service.title}
                   </h3>
                   <p className="mt-2 text-sm text-body/80">{service.description}</p>
                   <Link
                     href={service.href}
-                    className="mt-4 inline-block text-sm font-medium text-electric transition group-hover:translate-x-1"
+                    className="mt-auto self-start pt-4 text-sm font-medium text-electric transition group-hover:translate-x-1"
                   >
                     Learn more →
                   </Link>
