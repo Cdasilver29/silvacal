@@ -1,20 +1,21 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { Sora, Manrope } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { siteConfig, contactInfo } from '@/data/site';
 
-const spaceGrotesk = Space_Grotesk({
+// Heading and body typefaces. To swap fonts, change these two constructors only.
+const headingFont = Sora({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-heading',
   display: 'swap',
 });
 
-const inter = Inter({
+const bodyFont = Manrope({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-body',
   display: 'swap',
 });
 
@@ -66,8 +67,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="font-body flex min-h-screen flex-col">
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
+      <body className="flex min-h-screen flex-col font-body leading-relaxed">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

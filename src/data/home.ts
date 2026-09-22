@@ -4,8 +4,10 @@ export type CtaLink = {
 };
 
 export const hero = {
-  eyebrow: 'SOFTWARE ENGINEERING. NAIROBI, KENYA',
-  headline: 'We Build Software That Moves Business Forward',
+  eyebrow: 'SILVACAL TECHNOLOGIES • NAIROBI, KENYA',
+  headlineLead: 'We Build Software That Moves Business',
+  rotatingWords: ['Forward', 'Faster', 'Smarter'],
+  motto: 'Engineering Tomorrow. Empowering Possibilities.',
   subtext:
     'We design, build, and support web platforms, mobile apps, and M-Pesa-integrated payment systems for businesses across Kenya and East Africa.',
   primaryCta: { label: 'Get a Quote', href: '/contact' } satisfies CtaLink,

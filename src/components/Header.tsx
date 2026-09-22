@@ -12,16 +12,26 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-silver/30 bg-background">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/brand/logo-full.png"
-            alt="Silvacal Technologies"
-            width={180}
-            height={48}
-            className="h-12 w-auto"
-            priority
-          />
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-3" aria-label="Silvacal Technologies home">
+          <span className="relative h-12 w-[61px] shrink-0 md:h-16 md:w-[82px]">
+            <Image
+              src="/brand/favicon.png"
+              alt=""
+              fill
+              sizes="82px"
+              className="object-contain mix-blend-multiply brightness-[1.07]"
+              priority
+            />
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="font-heading text-lg font-bold tracking-tight text-navy md:text-xl">
+              SILVACAL
+            </span>
+            <span className="mt-1 text-[10px] font-semibold tracking-[0.3em] text-body/60">
+              TECHNOLOGIES
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

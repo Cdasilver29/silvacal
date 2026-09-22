@@ -12,8 +12,8 @@ const config: Config = {
         body: '#1F2937',
       },
       fontFamily: {
-        heading: ['var(--font-space-grotesk)', 'sans-serif'],
-        body: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-heading)', 'sans-serif'],
+        body: ['var(--font-body)', 'sans-serif'],
       },
       borderRadius: {
         '2xl': '1rem',

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { hero } from '@/data/home';
+import RotatingWord from '@/components/RotatingWord';
 
 export default function Hero() {
   return (
@@ -13,13 +14,16 @@ export default function Hero() {
       />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-32">
         <div>
-          <p className="font-heading text-sm font-semibold tracking-widest text-electric">
+          <p className="font-heading text-xs font-semibold tracking-widest text-electric sm:text-sm">
             {hero.eyebrow}
           </p>
-          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-            {hero.headline}
+          <h1 className="mt-4 font-heading text-4xl font-bold leading-[1.1] text-white sm:text-5xl xl:text-6xl">
+            {hero.headlineLead} <RotatingWord words={hero.rotatingWords} />
           </h1>
           <p className="mt-6 max-w-xl text-lg text-silver/90">{hero.subtext}</p>
+          <p className="mt-4 font-heading text-base font-medium text-electric sm:text-lg">
+            {hero.motto}
+          </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href={hero.primaryCta.href}
