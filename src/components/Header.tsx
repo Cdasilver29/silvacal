@@ -75,7 +75,7 @@ export default function Header() {
           )}
           <Link
             href="/contact"
-            className="rounded-2xl bg-electric px-5 py-2 font-heading text-sm font-medium text-white transition hover:scale-105"
+            className="btn rounded-2xl bg-electric px-5 py-2 font-heading text-sm font-medium text-white"
           >
             Get a Quote
           </Link>
@@ -132,7 +132,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mt-2 rounded-2xl bg-electric px-5 py-2 text-center font-heading text-sm font-medium text-white transition hover:scale-105"
+                className="btn mt-2 rounded-2xl bg-electric px-5 py-2 text-center font-heading text-sm font-medium text-white"
                 onClick={() => setMobileOpen(false)}
               >
                 Get a Quote

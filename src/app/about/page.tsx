@@ -67,8 +67,8 @@ export default function AboutPage() {
               ))}
             </div>
           </Reveal>
-          <Reveal>
-            <div className="relative hidden h-80 lg:block">
+          <Reveal className="hidden lg:block">
+            <div className="relative h-80">
               <div className="absolute inset-0 rounded-2xl border border-silver/40 bg-gradient-to-br from-electric/10 via-transparent to-transparent" />
               <div
                 className="absolute inset-0 rounded-2xl"
@@ -103,21 +103,19 @@ export default function AboutPage() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">Why Choose Us</h2>
-          <Reveal>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {whyChooseUs.map((item) => {
-                const Icon = iconMap[item.icon];
-                return (
-                  <div key={item.title} className="rounded-2xl border border-silver/40 p-6">
-                    <Icon />
-                    <h3 className="mt-4 font-heading text-lg font-semibold text-navy">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-body/80">{item.description}</p>
-                  </div>
-                );
-              })}
-            </div>
+          <Reveal stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {whyChooseUs.map((item) => {
+              const Icon = iconMap[item.icon];
+              return (
+                <div key={item.title} className="rounded-2xl border border-silver/40 p-6">
+                  <Icon />
+                  <h3 className="mt-4 font-heading text-lg font-semibold text-navy">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-body/80">{item.description}</p>
+                </div>
+              );
+            })}
           </Reveal>
         </div>
       </section>
@@ -125,17 +123,15 @@ export default function AboutPage() {
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">Our Values</h2>
-          <Reveal>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {values.map((value) => (
-                <div key={value.title}>
-                  <h3 className="font-heading text-lg font-semibold text-electric">
-                    {value.title}
-                  </h3>
-                  <p className="mt-2 text-silver/80">{value.description}</p>
-                </div>
-              ))}
-            </div>
+          <Reveal stagger className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value) => (
+              <div key={value.title}>
+                <h3 className="font-heading text-lg font-semibold text-electric">
+                  {value.title}
+                </h3>
+                <p className="mt-2 text-silver/80">{value.description}</p>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>

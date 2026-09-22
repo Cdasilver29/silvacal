@@ -193,7 +193,7 @@ export default function ContactForm({ serviceOptions }: { serviceOptions: Servic
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="mt-2 rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white transition hover:scale-105 disabled:opacity-60 disabled:hover:scale-100"
+        className="btn mt-2 rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white disabled:opacity-60 disabled:hover:scale-100"
       >
         {status === 'loading' ? 'Sending...' : 'Send Request'}
       </button>

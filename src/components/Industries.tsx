@@ -30,23 +30,21 @@ export default function Industries() {
           {industries.heading}
         </h2>
         <p className="mt-4 max-w-2xl text-silver/90">{industries.intro}</p>
-        <Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {industries.items.map((item) => {
-              const Icon = iconMap[item.icon];
-              return (
-                <div
-                  key={item.name}
-                  className="group flex flex-col items-center gap-3 rounded-2xl border border-silver/30 px-4 py-8 text-center transition hover:-translate-y-1 hover:border-electric"
-                >
-                  <span className="text-silver transition group-hover:text-electric">
-                    <Icon />
-                  </span>
-                  <span className="font-heading text-sm font-medium text-white">{item.name}</span>
-                </div>
-              );
-            })}
-          </div>
+        <Reveal stagger className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {industries.items.map((item) => {
+            const Icon = iconMap[item.icon];
+            return (
+              <div
+                key={item.name}
+                className="group flex flex-col items-center gap-3 rounded-2xl border border-silver/30 px-4 py-8 text-center transition hover:-translate-y-1 hover:border-electric"
+              >
+                <span className="text-silver transition group-hover:text-electric">
+                  <Icon />
+                </span>
+                <span className="font-heading text-sm font-medium text-white">{item.name}</span>
+              </div>
+            );
+          })}
         </Reveal>
       </div>
     </section>

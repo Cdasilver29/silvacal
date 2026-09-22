@@ -41,62 +41,60 @@ export default function PortfolioPage() {
               <p className="mt-4 text-body/80">{portfolioEmpty.line}</p>
             </div>
           ) : (
-            <Reveal>
-              <div className="grid gap-8 lg:grid-cols-2">
-                {publishedProjects.map((project) => {
-                  const body = (
-                    <>
-                      <div className="bg-navy px-6 py-5">
-                        <p className="font-heading text-xs font-semibold uppercase tracking-wider text-electric">
-                          {project.category}
-                        </p>
-                        <p className="mt-1 text-sm text-silver/80">{project.client}</p>
-                      </div>
-                      <div className="flex flex-1 flex-col p-6">
-                        <div className="flex flex-wrap items-center justify-between gap-3">
-                          <h2 className="font-heading text-xl font-semibold text-navy">
-                            {project.name}
-                          </h2>
-                          <StatusBadge status={project.status} />
-                        </div>
-                        <p className="mt-2 text-body/80">{project.summary}</p>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {project.stack.map((tech) => (
-                            <span
-                              key={tech}
-                              className="rounded-2xl border border-silver/40 px-3 py-1 text-xs font-medium text-navy"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                        {project.hasDetail && (
-                          <span className="mt-6 font-heading text-sm font-semibold text-electric">
-                            Read the case study{' '}
-                            <span className="inline-block transition group-hover:translate-x-1">→</span>
-                          </span>
-                        )}
-                      </div>
-                    </>
-                  );
-                  return project.hasDetail ? (
-                    <Link
-                      key={project.slug}
-                      href={`/portfolio/${project.slug}`}
-                      className="group flex flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg"
-                    >
-                      {body}
-                    </Link>
-                  ) : (
-                    <div
-                      key={project.slug}
-                      className="flex flex-col overflow-hidden rounded-2xl border border-silver/40"
-                    >
-                      {body}
+            <Reveal stagger className="grid gap-8 lg:grid-cols-2">
+              {publishedProjects.map((project) => {
+                const body = (
+                  <>
+                    <div className="bg-navy px-6 py-5">
+                      <p className="font-heading text-xs font-semibold uppercase tracking-wider text-electric">
+                        {project.category}
+                      </p>
+                      <p className="mt-1 text-sm text-silver/80">{project.client}</p>
                     </div>
-                  );
-                })}
-              </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <h2 className="font-heading text-xl font-semibold text-navy">
+                          {project.name}
+                        </h2>
+                        <StatusBadge status={project.status} />
+                      </div>
+                      <p className="mt-2 text-body/80">{project.summary}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {project.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="rounded-2xl border border-silver/40 px-3 py-1 text-xs font-medium text-navy"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      {project.hasDetail && (
+                        <span className="mt-6 font-heading text-sm font-semibold text-electric">
+                          Read the case study{' '}
+                          <span className="inline-block transition group-hover:translate-x-1">→</span>
+                        </span>
+                      )}
+                    </div>
+                  </>
+                );
+                return project.hasDetail ? (
+                  <Link
+                    key={project.slug}
+                    href={`/portfolio/${project.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg"
+                  >
+                    {body}
+                  </Link>
+                ) : (
+                  <div
+                    key={project.slug}
+                    className="flex flex-col overflow-hidden rounded-2xl border border-silver/40"
+                  >
+                    {body}
+                  </div>
+                );
+              })}
             </Reveal>
           )}
         </div>

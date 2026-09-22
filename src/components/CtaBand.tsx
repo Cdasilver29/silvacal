@@ -7,7 +7,7 @@ export default function CtaBand() {
   return (
     <section className="relative overflow-hidden border-t border-silver/10 bg-navy">
       <div
-        className="pointer-events-none absolute inset-0"
+        className="animate-glow pointer-events-none absolute inset-0"
         style={{
           background:
             'radial-gradient(circle at 50% 50%, rgba(59,130,246,0.25), transparent 60%)',
@@ -22,7 +22,7 @@ export default function CtaBand() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href={ctaBand.primaryCta.href}
-              className="rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white transition hover:scale-105"
+              className="btn btn-sheen rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               {ctaBand.primaryCta.label}
             </Link>
@@ -30,7 +30,7 @@ export default function CtaBand() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border border-silver px-6 py-3 font-heading text-sm font-semibold text-silver transition hover:scale-105 hover:border-electric hover:text-electric"
+              className="btn rounded-2xl border border-silver px-6 py-3 font-heading text-sm font-semibold text-silver hover:border-electric hover:text-electric"
             >
               {ctaBand.secondaryCtaLabel}
             </a>

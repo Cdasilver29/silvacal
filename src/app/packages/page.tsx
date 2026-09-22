@@ -37,43 +37,42 @@ export default function PackagesPage() {
             <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
               {group.heading}
             </h2>
-            <Reveal>
-              <div
-                className={`mt-10 grid gap-6 sm:grid-cols-2 ${
-                  group.tiers.length === 3 ? 'lg:grid-cols-3' : 'mx-auto lg:max-w-3xl'
-                }`}
-              >
-                {group.tiers.map((tier) => (
-                  <div
-                    key={tier.name}
-                    className={`relative flex flex-col rounded-2xl border p-6 ${
-                      tier.popular ? 'border-electric' : 'border-silver/40'
-                    }`}
+            <Reveal
+              stagger
+              className={`mt-10 grid gap-6 sm:grid-cols-2 ${
+                group.tiers.length === 3 ? 'lg:grid-cols-3' : 'mx-auto lg:max-w-3xl'
+              }`}
+            >
+              {group.tiers.map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`card-tilt relative flex flex-col rounded-2xl border p-6 transition ${
+                    tier.popular ? 'border-electric' : 'border-silver/40'
+                  }`}
+                >
+                  {tier.popular && (
+                    <span className="badge-pulse absolute -top-3 left-6 rounded-full bg-electric px-3 py-1 font-heading text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="font-heading text-xl font-semibold text-navy">{tier.name}</h3>
+                  <p className="mt-2 font-heading text-2xl font-bold text-navy">{tier.price}</p>
+                  <ul className="mt-4 flex flex-1 flex-col gap-2">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2 text-sm text-body/80">
+                        <CheckIcon />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className="btn mt-6 inline-block rounded-2xl bg-electric px-6 py-3 text-center font-heading text-sm font-semibold text-white"
                   >
-                    {tier.popular && (
-                      <span className="absolute -top-3 left-6 rounded-full bg-electric px-3 py-1 font-heading text-xs font-semibold text-white">
-                        Most Popular
-                      </span>
-                    )}
-                    <h3 className="font-heading text-xl font-semibold text-navy">{tier.name}</h3>
-                    <p className="mt-2 font-heading text-2xl font-bold text-navy">{tier.price}</p>
-                    <ul className="mt-4 flex flex-1 flex-col gap-2">
-                      {tier.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2 text-sm text-body/80">
-                          <CheckIcon />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href="/contact"
-                      className="mt-6 inline-block rounded-2xl bg-electric px-6 py-3 text-center font-heading text-sm font-semibold text-white transition hover:scale-105"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                ))}
-              </div>
+                    Get Started
+                  </Link>
+                </div>
+              ))}
             </Reveal>
           </div>
         </section>

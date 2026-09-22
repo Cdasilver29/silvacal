@@ -29,7 +29,7 @@ export default function AboutStrip() {
             </ul>
             <Link
               href={aboutStrip.cta.href}
-              className="self-start rounded-2xl border border-silver px-6 py-3 font-heading text-sm font-semibold text-silver transition hover:scale-105 hover:border-electric hover:text-electric"
+              className="btn self-start rounded-2xl border border-silver px-6 py-3 font-heading text-sm font-semibold text-silver hover:border-electric hover:text-electric"
             >
               {aboutStrip.cta.label}
             </Link>

@@ -19,13 +19,17 @@ export default function Footer() {
     <footer className="bg-navy text-silver">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <Image
-            src="/brand/logo-full.png"
-            alt={siteConfig.name}
-            width={160}
-            height={42}
-            className="mb-4 h-10 w-auto"
-          />
+          <Link href="/" className="mb-4 flex items-center gap-3" aria-label={`${siteConfig.name} home`}>
+            <span className="relative h-12 w-14 shrink-0 overflow-hidden rounded-xl bg-white">
+              <Image src="/brand/favicon.png" alt="" fill sizes="56px" className="object-contain p-1" />
+            </span>
+            <span className="flex flex-col leading-none">
+              <span className="font-heading text-lg font-bold tracking-tight text-white">SILVACAL</span>
+              <span className="mt-1 text-[10px] font-semibold tracking-[0.3em] text-silver/80">
+                TECHNOLOGIES
+              </span>
+            </span>
+          </Link>
           <p className="text-sm text-silver/80">{siteConfig.description}</p>
         </div>
 
@@ -34,7 +38,7 @@ export default function Footer() {
           <ul className="mt-4 flex flex-col gap-2">
             {servicesItem?.children?.map((child) => (
               <li key={child.href}>
-                <Link href={child.href} className="text-sm transition hover:text-electric">
+                <Link href={child.href} className="text-sm link-draw hover:text-electric">
                   {child.label}
                 </Link>
               </li>
@@ -47,7 +51,7 @@ export default function Footer() {
           <ul className="mt-4 flex flex-col gap-2">
             {quickLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-sm transition hover:text-electric">
+                <Link href={item.href} className="text-sm link-draw hover:text-electric">
                   {item.label}
                 </Link>
               </li>
@@ -61,13 +65,13 @@ export default function Footer() {
             <li>{contactInfo.location}</li>
             {contactInfo.phones.map((phone) => (
               <li key={phone.e164}>
-                <a href={`tel:${phone.e164}`} className="transition hover:text-electric">
+                <a href={`tel:${phone.e164}`} className="link-draw hover:text-electric">
                   {phone.display}
                 </a>
               </li>
             ))}
             <li>
-              <a href={`mailto:${contactInfo.email}`} className="transition hover:text-electric">
+              <a href={`mailto:${contactInfo.email}`} className="link-draw hover:text-electric">
                 {contactInfo.email}
               </a>
             </li>
@@ -92,10 +96,10 @@ export default function Footer() {
       <div className="border-t border-silver/20 px-4 py-6 text-center text-sm text-silver/70">
         <p>© 2026 Silvacal Technologies. All rights reserved</p>
         <div className="mt-2 flex justify-center gap-4">
-          <Link href="/privacy" className="transition hover:text-electric">
+          <Link href="/privacy" className="link-draw hover:text-electric">
             Privacy Policy
           </Link>
-          <Link href="/terms" className="transition hover:text-electric">
+          <Link href="/terms" className="link-draw hover:text-electric">
             Terms of Service
           </Link>
         </div>

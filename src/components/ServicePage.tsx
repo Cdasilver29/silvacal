@@ -54,7 +54,7 @@ export default function ServicePage({ service }: { service: Service }) {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-block rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white transition hover:scale-105"
+              className="btn inline-block rounded-2xl bg-electric px-6 py-3 font-heading text-sm font-semibold text-white"
             >
               Get a Quote
             </Link>
@@ -67,20 +67,18 @@ export default function ServicePage({ service }: { service: Service }) {
           <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
             What&apos;s Included
           </h2>
-          <Reveal>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2">
-              {service.offerings.map((offering) => (
-                <div
-                  key={offering.title}
-                  className="rounded-2xl border border-silver/40 p-6 transition hover:-translate-y-1 hover:border-electric"
-                >
-                  <h3 className="font-heading text-lg font-semibold text-navy">
-                    {offering.title}
-                  </h3>
-                  <p className="mt-2 text-body/80">{offering.description}</p>
-                </div>
-              ))}
-            </div>
+          <Reveal stagger className="mt-12 grid gap-6 sm:grid-cols-2">
+            {service.offerings.map((offering) => (
+              <div
+                key={offering.title}
+                className="card-tilt rounded-2xl border border-silver/40 p-6 transition hover:border-electric"
+              >
+                <h3 className="font-heading text-lg font-semibold text-navy">
+                  {offering.title}
+                </h3>
+                <p className="mt-2 text-body/80">{offering.description}</p>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>
@@ -88,18 +86,16 @@ export default function ServicePage({ service }: { service: Service }) {
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">How We Work</h2>
-          <Reveal>
-            <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {service.process.map((step, index) => (
-                <div key={step.title} className="flex flex-col items-start gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-electric font-heading text-sm font-semibold text-electric">
-                    {index + 1}
-                  </div>
-                  <h3 className="font-heading text-lg font-semibold text-white">{step.title}</h3>
-                  <p className="text-silver/80">{step.description}</p>
+          <Reveal stagger className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {service.process.map((step, index) => (
+              <div key={step.title} className="flex flex-col items-start gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-electric font-heading text-sm font-semibold text-electric">
+                  {index + 1}
                 </div>
-              ))}
-            </div>
+                <h3 className="font-heading text-lg font-semibold text-white">{step.title}</h3>
+                <p className="text-silver/80">{step.description}</p>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>

@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import MotionController from '@/components/MotionController';
+import ScrollProgress from '@/components/ScrollProgress';
 import { siteConfig, contactInfo } from '@/data/site';
 
 // Heading and body typefaces. To swap fonts, change these two constructors only.
@@ -67,16 +69,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Marks JS as available before first paint, so CSS entrance motion never hides no-JS content. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="flex min-h-screen flex-col font-body leading-relaxed">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <ScrollProgress />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <MotionController />
       </body>
     </html>
   );

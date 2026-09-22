@@ -1,5 +1,4 @@
 import { techStack } from '@/data/home';
-import Reveal from '@/components/Reveal';
 import {
   TypeScriptIcon,
   ReactIcon,
@@ -26,32 +25,40 @@ const iconMap = {
   mpesa: MpesaIcon,
 };
 
+function TechTiles() {
+  return techStack.items.map((item) => {
+    const Icon = iconMap[item.icon];
+    return (
+      <li
+        key={item.name}
+        className="group flex flex-col items-center gap-3 rounded-2xl border border-silver/40 bg-background px-4 py-8 text-center transition hover:border-electric"
+      >
+        <span className="text-navy transition-colors duration-300 group-hover:text-electric">
+          <Icon />
+        </span>
+        <span className="font-heading text-sm font-medium text-navy">{item.name}</span>
+      </li>
+    );
+  });
+}
+
 export default function TechStack() {
   return (
-    <section className="bg-background">
+    <section className="bg-dot-grid overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
           {techStack.heading}
         </h2>
         <p className="mt-4 max-w-2xl text-body/80">{techStack.intro}</p>
-        <Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {techStack.items.map((item) => {
-              const Icon = iconMap[item.icon];
-              return (
-                <div
-                  key={item.name}
-                  className="group flex flex-col items-center gap-3 rounded-2xl border border-silver/40 px-4 py-8 text-center transition hover:-translate-y-1 hover:border-electric"
-                >
-                  <span className="text-navy transition group-hover:text-electric">
-                    <Icon />
-                  </span>
-                  <span className="font-heading text-sm font-medium text-navy">{item.name}</span>
-                </div>
-              );
-            })}
-          </div>
-        </Reveal>
+        {/* Static grid by default; CSS turns it into a marquee when motion is allowed. */}
+        <div className="marquee mt-12">
+          <ul className="marquee-track grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            <TechTiles />
+          </ul>
+          <ul className="marquee-track marquee-copy" aria-hidden="true">
+            <TechTiles />
+          </ul>
+        </div>
       </div>
     </section>
   );
