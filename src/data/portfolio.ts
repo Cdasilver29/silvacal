@@ -149,7 +149,6 @@ export const portfolioProjects: PortfolioProject[] = [
     published: true,
     hasDetail: true,
   },
-  // TODO: detail content needs review before publishing.
   {
     slug: 'crystal-fountain',
     name: 'Crystal Fountain Development Project',
@@ -158,13 +157,23 @@ export const portfolioProjects: PortfolioProject[] = [
     summary:
       'Pledge capture and contribution tracking for a church building fund, with M-Pesa payments.',
     problem:
-      'A church building fund tracking pledges and contributions manually, with no visibility for members into progress or their own giving history.',
+      'A church running a multi-year building fund campaign was tracking pledges and contributions by hand. Members had no way to see campaign progress or check their own pledge balance, and the committee had no reliable reconciliation between money received and pledges made.',
     approach:
-      'Web platform for pledge capture and contribution tracking with M-Pesa payment support and progress reporting.',
+      'A production web platform, not a static campaign page. Pledges accumulate against a phone number so one person holds one reference and one QR code across multiple commitments, with bot protection auto-approving smaller pledges and routing larger ones to committee review. Contributions arrive through Paybill and bank transfer and are recorded in an admin portal with duplicate detection, then allocated against pledges in transactional operations with row-level locking, auto-fulfilment and reversal-based corrections. Administration is role-separated across viewer, treasurer and admin with two-factor authentication and a full audit trail on every action. Members look up their own balance by reference or phone. A nightly snapshot job feeds progress charts, run-rate analysis and forecasting.',
     outcome:
-      'Members pledge and contribute digitally with transparent fund progress.',
-    stack: ['TypeScript', 'React', 'PostgreSQL', 'M-Pesa Daraja API'],
-    status: 'In development',
+      'The committee reconciles contributions against pledges in one system with a complete audit trail, and members see live campaign progress and their own balance without contacting anyone.',
+    stack: [
+      'Next.js 15',
+      'React 19',
+      'TypeScript',
+      'Drizzle ORM',
+      'Neon Postgres',
+      'Better Auth',
+      'Tailwind CSS',
+      'Recharts',
+      'Vercel',
+    ],
+    status: 'In production',
     published: true,
     hasDetail: true,
   },
