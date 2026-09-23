@@ -100,7 +100,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Vercel',
     ],
     status: 'Delivered',
-    published: false,
+    published: true,
     hasDetail: true,
   },
   {
@@ -117,7 +117,7 @@ export const portfolioProjects: PortfolioProject[] = [
     outcome: 'Fast, maintainable site deployed from GitHub to Vercel.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
     status: 'Delivered',
-    published: false,
+    published: true,
     hasDetail: true,
   },
   {
@@ -165,7 +165,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Members pledge and contribute digitally with transparent fund progress.',
     stack: ['TypeScript', 'React', 'PostgreSQL', 'M-Pesa Daraja API'],
     status: 'In development',
-    published: false,
+    published: true,
     hasDetail: true,
   },
 ];
