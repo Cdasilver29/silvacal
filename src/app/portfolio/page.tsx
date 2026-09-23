@@ -41,7 +41,7 @@ export default function PortfolioPage() {
               <p className="mt-4 text-body/80">{portfolioEmpty.line}</p>
             </div>
           ) : (
-            <Reveal stagger className="grid gap-8 lg:grid-cols-2">
+            <Reveal stagger className="flex flex-wrap justify-center gap-8">
               {publishedProjects.map((project) => {
                 const body = (
                   <>
@@ -82,14 +82,14 @@ export default function PortfolioPage() {
                   <Link
                     key={project.slug}
                     href={`/portfolio/${project.slug}`}
-                    className="group flex flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg"
+                    className="group flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg lg:w-[calc(50%-16px)]"
                   >
                     {body}
                   </Link>
                 ) : (
                   <div
                     key={project.slug}
-                    className="flex flex-col overflow-hidden rounded-2xl border border-silver/40"
+                    className="flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 lg:w-[calc(50%-16px)]"
                   >
                     {body}
                   </div>

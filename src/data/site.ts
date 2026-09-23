@@ -42,7 +42,14 @@ export const navItems: NavItem[] = [
   },
   { label: 'Packages', href: '/packages' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'About', href: '/about' },
+  {
+    label: 'About',
+    href: '/about',
+    children: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Our Team', href: '/team' },
+    ],
+  },
   { label: 'Contact', href: '/contact' },
 ];
 

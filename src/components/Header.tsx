@@ -8,8 +8,8 @@ import { MenuIcon, CloseIcon } from '@/components/icons';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const servicesButtonRef = useRef<HTMLButtonElement>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const menuButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -56,34 +56,39 @@ export default function Header() {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={() => setOpenMenu(item.label)}
+                onMouseLeave={() => setOpenMenu(null)}
                 onKeyDown={(e) => {
                   if (e.key !== 'Escape') return;
-                  setServicesOpen(false);
-                  servicesButtonRef.current?.focus();
+                  setOpenMenu(null);
+                  menuButtonRefs.current[item.label]?.focus();
                 }}
                 onBlur={(e) => {
-                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setServicesOpen(false);
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpenMenu(null);
                 }}
               >
                 <button
-                  ref={servicesButtonRef}
+                  ref={(el) => {
+                    menuButtonRefs.current[item.label] = el;
+                  }}
                   className="font-heading text-sm font-medium text-navy transition hover:text-electric-strong"
-                  aria-expanded={servicesOpen}
-                  aria-controls="services-menu"
-                  onClick={() => setServicesOpen((open) => !open)}
+                  aria-expanded={openMenu === item.label}
+                  aria-controls={`${item.label.toLowerCase()}-menu`}
+                  onClick={() => setOpenMenu((open) => (open === item.label ? null : item.label))}
                 >
                   {item.label}
                 </button>
-                {servicesOpen && (
-                  <div id="services-menu" className="absolute left-0 top-full w-64 rounded-2xl border border-silver/30 bg-background py-2 shadow-lg">
+                {openMenu === item.label && (
+                  <div
+                    id={`${item.label.toLowerCase()}-menu`}
+                    className="absolute left-0 top-full w-64 rounded-2xl border border-silver/30 bg-background py-2 shadow-lg"
+                  >
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         className="block px-4 py-2 text-sm text-body transition hover:text-electric-strong"
-                        onClick={() => setServicesOpen(false)}
+                        onClick={() => setOpenMenu(null)}
                       >
                         {child.label}
                       </Link>

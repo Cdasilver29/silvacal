@@ -120,6 +120,35 @@ export const portfolioProjects: PortfolioProject[] = [
     published: false,
     hasDetail: true,
   },
+  {
+    slug: 'landguard',
+    name: 'LandGuard',
+    client: 'Land Degradation Hackathon',
+    category: 'AI & Data Platform',
+    summary:
+      'A monitoring platform combining satellite imagery and machine learning to assess land degradation risk, built for and winner of a land degradation hackathon.',
+    problem:
+      'Land degradation advances quietly, and the people who could act on it, farmers and policymakers, have no practical way to see soil health, vegetation cover and erosion risk for a specific location.',
+    approach:
+      'FastAPI backend with async SQLAlchemy, a RandomForest classifier trained on public land degradation data, Google Earth Engine for vegetation index data pulled from satellite imagery, and a React frontend with interactive dashboards and a geographic risk map. Role-based access separates what farmers, policymakers, community users and administrators can see, with the risk map restricted to policymakers.',
+    outcome:
+      'Farmers enter a location and soil readings and receive a risk assessment with recommendations, while policymakers see aggregated statistics and the geographic distribution of high-risk areas.',
+    stack: [
+      'Python',
+      'FastAPI',
+      'SQLAlchemy',
+      'scikit-learn',
+      'Google Earth Engine',
+      'React',
+      'TypeScript',
+      'Leaflet',
+      'Chart.js',
+      'Tailwind CSS',
+    ],
+    status: 'Prototype',
+    published: true,
+    hasDetail: true,
+  },
   // TODO: detail content needs review before publishing.
   {
     slug: 'crystal-fountain',

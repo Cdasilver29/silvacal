@@ -317,6 +317,15 @@ export function TagIcon() {
   );
 }
 
+export function UserIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">
+      <circle cx="12" cy="8" r="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 21v-1a6 6 0 016-6h4a6 6 0 016 6v1" />
+    </svg>
+  );
+}
+
 export function ClockIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-electric" aria-hidden="true">

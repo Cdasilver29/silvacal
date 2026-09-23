@@ -11,7 +11,9 @@ const socialIcons: Record<string, React.ReactNode> = {
 };
 
 const servicesItem = navItems.find((item) => item.label === 'Services');
-const quickLinks = navItems.filter((item) => !item.children);
+const quickLinks = navItems
+  .filter((item) => item !== servicesItem)
+  .flatMap((item) => item.children ?? [item]);
 const enabledSocialLinks = socialLinks.filter((social) => social.enabled);
 
 export default function Footer() {

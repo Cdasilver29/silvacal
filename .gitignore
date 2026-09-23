@@ -4,3 +4,6 @@ out
 .env*.local
 *.tsbuildinfo
 next-env.d.ts
+
+# Local source assets (originals of optimised files in public/)
+assets-src/
