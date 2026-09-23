@@ -67,13 +67,13 @@ export default function ServicePage({ service }: { service: Service }) {
           <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
             What&apos;s Included
           </h2>
-          <Reveal stagger className="mt-12 grid gap-6 sm:grid-cols-2">
+          <Reveal stagger className="mt-12 flex flex-wrap justify-center gap-6">
             {service.offerings.map((offering) => (
               <div
                 key={offering.title}
-                className="card-tilt rounded-2xl border border-silver/40 p-6 transition hover:border-electric"
+                className="card-tilt w-full rounded-2xl border border-silver/40 p-6 transition hover:border-electric sm:w-[calc(50%-12px)]"
               >
-                <h3 className="font-heading text-lg font-semibold text-navy">
+                <h3 className="text-balance font-heading text-lg font-semibold text-navy">
                   {offering.title}
                 </h3>
                 <p className="mt-2 text-body/80">{offering.description}</p>

@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading text-base font-semibold text-white">Services</h3>
+          <h2 className="font-heading text-base font-semibold tracking-normal text-white">Services</h2>
           <ul className="mt-4 flex flex-col gap-6 md:gap-2">
             {servicesItem?.children?.map((child) => (
               <li key={child.href}>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading text-base font-semibold text-white">Quick Links</h3>
+          <h2 className="font-heading text-base font-semibold tracking-normal text-white">Quick Links</h2>
           <ul className="mt-4 flex flex-col gap-6 md:gap-2">
             {quickLinks.map((item) => (
               <li key={item.href}>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading text-base font-semibold text-white">Contact</h3>
+          <h2 className="font-heading text-base font-semibold tracking-normal text-white">Contact</h2>
           <ul className="mt-4 flex flex-col gap-6 text-sm md:gap-2">
             <li>{contactInfo.location}</li>
             {contactInfo.phones.map((phone) => (

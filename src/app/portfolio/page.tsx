@@ -70,7 +70,7 @@ export default function PortfolioPage() {
                         ))}
                       </div>
                       {project.hasDetail && (
-                        <span className="mt-6 font-heading text-sm font-semibold text-electric-strong">
+                        <span className="mt-auto pt-6 font-heading text-sm font-semibold text-electric-strong">
                           Read the case study{' '}
                           <span className="inline-block transition group-hover:translate-x-1">→</span>
                         </span>
@@ -82,14 +82,14 @@ export default function PortfolioPage() {
                   <Link
                     key={project.slug}
                     href={`/portfolio/${project.slug}`}
-                    className="group flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg lg:w-[calc(50%-16px)]"
+                    className="group flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 transition hover:border-electric/60 hover:shadow-lg md:w-[calc(50%-16px)]"
                   >
                     {body}
                   </Link>
                 ) : (
                   <div
                     key={project.slug}
-                    className="flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 lg:w-[calc(50%-16px)]"
+                    className="flex w-full flex-col overflow-hidden rounded-2xl border border-silver/40 md:w-[calc(50%-16px)]"
                   >
                     {body}
                   </div>

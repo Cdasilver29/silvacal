@@ -4,11 +4,12 @@ Marketing site for Silvacal Technologies, a software engineering company in Nair
 
 ## Stack
 
-- Next.js 14 (App Router) with `output: 'export'`: every page is prerendered to static HTML in `out/`
-- React 18, TypeScript, Tailwind CSS 3
-- Fonts via `next/font`: Sora (headings) and Manrope (body)
-- Contact form posts to Web3Forms (access key in `src/data/contact.ts`)
-- No runtime dependencies beyond Next and React; icons are inline SVGs in `src/components/icons.tsx`
+- **Next.js 14** (App Router) with `output: 'export'`: every page is prerendered to static HTML in `out/`. There is no server at runtime.
+- **TypeScript** and **Tailwind CSS 3**
+- **Fonts:** Sora (headings) and Manrope (body) via `next/font`, exposed as `--font-heading` and `--font-body`
+- **Icons:** inline SVG components in `src/components/icons.tsx`. There is no icon library dependency.
+- **Contact form:** posts to Web3Forms (access key in `src/data/contact.ts`)
+- **Runtime dependencies:** only `next`, `react` and `react-dom`
 
 ## Commands
 
@@ -21,7 +22,7 @@ pnpm lint
 
 ### Previewing the production build
 
-`pnpm start` does **not** work with a static export (Next exits with an `output: export` error). Build, then serve the `out/` folder:
+`pnpm start` does **not** work with a static export; Next exits with an `output: export` error. Build, then serve the `out/` folder:
 
 ```bash
 pnpm build
@@ -36,50 +37,75 @@ npx serve out
 
 No `vercel.json` is needed. You would only need one to deploy with the plain "Other" static preset, which this project doesn't use.
 
-Set the production domain in `src/data/site.ts` (`siteConfig.url`) so canonical URLs, the sitemap and Open Graph tags point to the right host.
+Set the production domain in `src/data/site.ts` (`siteConfig.url`) so canonical URLs, the sitemap, Open Graph tags and JSON-LD point to the right host.
 
-## Where content lives
+### Filenames must stay lowercase
 
-All copy is in typed data files under `src/data/`. Pages and components only render it.
+Vercel builds on Linux, where file paths are case-sensitive. Windows and macOS are not, so a reference like `/brand/Founder.jpg` pointing at `founder.jpg` works locally and 404s in production. Keep every filename in `public/` lowercase, and reference it in lowercase.
 
-| File | Content |
-| --- | --- |
-| `site.ts` | Company name, URL, phone numbers, email, WhatsApp link, navigation, social links |
-| `home.ts` | Hero, stats, homepage service cards, about strip, tech stack, industries, CTA band, testimonials |
-| `services.ts` | The seven service pages: offerings, process, technologies, FAQs, SEO |
-| `portfolio.ts` | Portfolio entries and case study content |
-| `packages.ts` | Pricing tiers and packages FAQ |
-| `about.ts` | About page story, mission, values |
-| `contact.ts` | Contact page copy, budget ranges, Web3Forms key |
-| `legal.ts` | Privacy policy and terms |
+## Content map
 
-Phone numbers are stored once in `site.ts` in E.164 format; every `tel:` and `wa.me` link is built from them.
+All copy lives in typed data files under `src/data/`. Pages and components only render it.
+
+| What | Where | Notes |
+| --- | --- | --- |
+| Company name, URL, phones, email, WhatsApp link | `site.ts` | Phones are stored once in E.164; every `tel:` and `wa.me` link is built from them |
+| Navigation, including the Services and About dropdowns | `site.ts` → `navItems` | The footer's Services and Quick Links lists are derived from this |
+| Social links | `site.ts` → `socialLinks` | See "Enable a social link" below |
+| The seven service pages | `services.ts` | Offerings, process, technologies, FAQs and SEO per service |
+| Homepage hero, stats, service cards, tech stack, industries, CTA band | `home.ts` | Homepage service cards are a separate short list from `services.ts` |
+| Portfolio entries and case studies | `portfolio.ts` | Six entries; see "Portfolio entries" below |
+| Team page: founder bio, credentials, How We Work | `team.ts` | The bio is marked as a placeholder |
+| Packages and pricing tiers | `packages.ts` | Each group has tiers; `popular: true` adds the "Most Popular" badge |
+| About page | `about.ts` | |
+| Contact page copy, budget ranges, Web3Forms key | `contact.ts` | |
+| Privacy policy and terms | `legal.ts` | |
 
 ## Common edits
 
-### Publish a portfolio entry
+### Portfolio entries
 
-In `src/data/portfolio.ts`, set `published: true` on the entry. Only published entries appear on `/portfolio`, and only published entries with `hasDetail: true` get a `/portfolio/[slug]` case study page and a sitemap entry. The Crystal Fountain entry has a `TODO` noting its content needs review before publishing.
+`portfolio.ts` holds six entries. Two flags control what renders:
+
+- `published: true`: the entry appears on `/portfolio`. Unpublished entries appear nowhere.
+- `hasDetail: true`: a published entry also gets a `/portfolio/[slug]` case study page and a sitemap entry, and its card links to it.
+
+The case study pages are generated at build time from the published entries, so adding or unpublishing an entry needs a rebuild and deploy.
+
+### Add or change a service
+
+A service appears in three places:
+
+1. Its page content in `services.ts`
+2. Its homepage card in `home.ts` → `services`
+3. Its nav link in `site.ts` → the Services `children`
+
+A new service also needs a route file at `src/app/services/<slug>/page.tsx`. Copy any existing one and change the slug. The contact form's service list and the sitemap pick it up automatically.
+
+### Team page
+
+Edit `founder` in `team.ts`: `bio` holds three paragraphs, and `credentials` is a list of `{ title, institution }`. The current bio is a draft, marked `PLACEHOLDER`, so replace it with the founder's own wording.
+
+The photo is `public/brand/founder.jpg`, shown in a 4:5 frame. If the file is missing, the build still succeeds and shows the SC mark instead. The uncompressed original is kept locally in `assets-src/` (git-ignored). To replace the photo, compress it to about 800px wide first: `public/` files ship unoptimised on a static export.
 
 ### Enable a social link
 
-In `src/data/site.ts`, set `href` to the profile URL and `enabled: true` on that entry in `socialLinks`. The footer renders only enabled links, and hides the icon row entirely when none are enabled.
+In `site.ts` → `socialLinks`, set the profile URL as `href` and `enabled: true`. The footer renders only enabled links, and hides the icon row entirely while none are enabled.
 
 ### Restore the testimonials section
 
-1. Add real, client-approved items to `testimonials.items` in `src/data/home.ts` (a commented example of the shape is above it).
+The section is removed until there are real, client-approved testimonials.
+
+1. Add items to `testimonials.items` in `home.ts` (a commented example of the shape sits above it).
 2. In `src/app/page.tsx`, uncomment the `Testimonials` import and the `{/* <Testimonials /> */}` line.
-
-### Founder bio and team page
-
-Not built yet. The team page (founder profile, credentials, "How We Work") was planned but deferred, so there is no `/team` route or founder bio to edit. When it is added, its content should live in a new `src/data/team.ts`, like the other data files.
 
 ### Swap fonts
 
-Change the two `next/font/google` constructors at the top of `src/app/layout.tsx`. Everything else reads the `--font-heading` and `--font-body` variables.
+Change the two `next/font/google` constructors at the top of `src/app/layout.tsx`. Everything else reads the CSS variables.
 
-## Motion and accessibility notes
+## Motion and accessibility
 
-- Content is fully visible in the server HTML. `MotionController` hides and animates elements only after mount, only below the fold, and only when `prefers-reduced-motion` is not set. A scroll/focus backstop reveals anything the observer misses.
-- Use `<Reveal>` (or `<Reveal stagger>` on a grid) to add scroll reveals. Section `h2`s get the heading wipe automatically.
-- Use `electric-strong` (`#2563EB`) for text on white and for button backgrounds; plain `electric` (`#3B82F6`) is for navy backgrounds and decoration only, since it fails WCAG AA contrast on white.
+- Content is fully visible in the server HTML. `MotionController` hides and animates elements only after mount, only below the fold, and only when `prefers-reduced-motion` is not set. Scroll and focus backstops reveal anything the observer misses. The hero entrance only runs when an inline script has added the `js` class.
+- Use `<Reveal>` for a scroll reveal, or `<Reveal stagger>` on a grid to reveal its children in sequence. Section `h2`s in `<main>` get the heading wipe automatically.
+- Colour: use `electric-strong` (`#2563EB`) for text on white and for button backgrounds. Plain `electric` (`#3B82F6`) is for navy backgrounds and decoration only, because it fails WCAG AA contrast on white. Silver is for text on navy and for borders, never for text on white.
+- On mobile, small text links use the `tap-target` class to get a 44px hit area without changing layout.
